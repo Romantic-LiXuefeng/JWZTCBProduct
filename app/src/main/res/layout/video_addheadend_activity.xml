@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <!--头部标题模块-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_vedio_back"
+            android:onClick="onClickBack" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_caogao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="草稿"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_hecheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合成"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--播放器模块-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000">
+
+        <VideoView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <ImageButton
+            android:id="@+id/pause_playback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#0000"
+            android:onClick="onClickPlayback"
+            android:src="@drawable/btn_pause" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:text="主题" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/moreresource" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#aa000000"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_piantou"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/img_piantou"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/weixuanze" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#aa000000"
+                    android:gravity="center"
+                    android:text="选择片头"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_video"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/img_video"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/weixuanze" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#aa000000"
+                    android:gravity="center"
+                    android:text="主视频"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pianwei"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/img_pianwei"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/weixuanze" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#aa000000"
+                    android:gravity="center"
+                    android:text="选择片尾"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_baonews"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/img_baonews"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/weixuanze" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#aa000000"
+                    android:gravity="center"
+                    android:text="爆新闻"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</LinearLayout>

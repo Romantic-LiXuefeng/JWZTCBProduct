@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8f0ee" >
+    <View
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/a5"
+        android:gravity="center"
+        android:textSize="22sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="全部任务"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_style_center_text_size" />
+<LinearLayout
+    android:layout_width="50dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/ll_back"
+    android:layout_height="wrap_content">
+  <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+
+        android:src="@drawable/back_white" />
+</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="22dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tv_titles"
+        android:padding="5dp"
+        android:src="@drawable/arrow_down" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/plus" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/white" />
+
+    <View
+        android:id="@+id/view_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:background="#4d000000"
+        android:visibility="gone" />
+    
+
+    <include
+        android:id="@+id/view_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        layout="@layout/layout_popup_going"
+        android:visibility="gone" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/zanwurenwu"
+        android:id="@+id/rl_renwu"
+   android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+   <com.jwzt.caibian.view.FontTextView 
+       android:clickable="true"
+       android:id="@+id/tv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="古力娜扎"
+       android:textColor="@color/grey3"
+       android:paddingLeft="12dp"
+       android:paddingRight="12dp"
+       android:paddingTop="10dp"
+       android:paddingBottom="10dp"
+       android:textSize="14sp"
+       android:background="@drawable/hot_tag_bg_selector"
+       android:layout_marginLeft="15dp"
+       android:layout_marginTop="16dp"
+       />
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:text="选用"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_style_text_size" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/cha_grey" />
+
+<!--    <RadioGroup
+        android:id="@+id/rg_nav_content"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+    </RadioGroup>-->
+    <com.jwzt.caibian.view.SyncHorizontalScrollView
+        android:id="@+id/mHsv1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/in_title"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rl_nav1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <RadioGroup
+                android:id="@+id/rg_nav_content"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"></RadioGroup>
+
+            <ImageView
+                android:id="@+id/iv_nav_indicator1"
+                android:layout_width="1dip"
+                android:layout_height="5dip"
+                android:layout_alignParentBottom="true"
+                android:background="#5AB0EB"
+                android:scaleType="matrix"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.jwzt.caibian.view.SyncHorizontalScrollView>
+
+<View
+    android:layout_below="@id/mHsv1"
+    android:id="@+id/view1"
+    android:layout_width="wrap_content"
+    android:layout_height="2dp"
+    android:background="#e8f0ee"
+    />
+
+
+
+    <com.jwzt.caibian.widget.NoScrollViewPager
+        android:id="@+id/vp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/view1"
+         />
+
+    <ImageView
+        android:id="@+id/iv_file"
+        style="@style/footage"
+        android:src="@drawable/files" />
+
+    <ImageView
+        android:id="@+id/iv_camera"
+        style="@style/footage"
+        android:src="@drawable/camerablue" />
+
+    <ImageView
+        android:id="@+id/iv_audio"
+        style="@style/footage"
+        android:src="@drawable/microphone" />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        style="@style/footage"
+        android:src="@drawable/photo" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        style="@style/footage"
+        android:src="@drawable/chas" />
+
+</RelativeLayout>

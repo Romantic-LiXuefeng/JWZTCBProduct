@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/press_selector">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_left_ringht"
+        android:src="@drawable/chuan" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dip"
+    android:layout_marginLeft="@dimen/margin_image_text_left_right"
+
+    android:layout_marginTop="14dp"
+    android:id="@+id/ll_title"
+    android:layout_toRightOf="@id/iv"
+    android:gravity="bottom"
+    android:layout_height="wrap_content">
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+
+        android:ellipsize="end"
+        android:ems="12"
+        android:singleLine="true"
+        android:text="您的稿件上传成功"
+        android:textColor="@color/videoFrameActivityMiddleBG"
+        android:textSize="@dimen/main_body_title_text_size" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="@dimen/margin_image_text_left_right"
+
+        android:singleLine="true"
+        android:text="59秒前"
+        android:textColor="@color/grey1"
+        android:textSize="12sp" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@id/ll_title"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="@dimen/margin_text_text_top_bottom"
+    android:layout_toRightOf="@id/iv"
+    android:layout_marginLeft="@dimen/margin_image_text_left_right"
+    android:gravity="bottom"
+    android:layout_height="wrap_content">
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+       android:layout_weight="2"
+
+
+        android:ellipsize="end"
+        android:ems="8"
+        android:maxLength="12"
+        android:singleLine="true"
+        android:text="美财长"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/main_body_text_size"/>
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_sendername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="@dimen/margin_image_text_left_right"
+
+        android:singleLine="true"
+        android:text="59秒前"
+        android:textColor="@color/grey1"
+        android:textSize="12sp" />
+
+
+
+</LinearLayout>
+
+
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_huifu"
+        android:layout_width="40dip"
+        android:layout_height="20dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_left_ringht"
+        android:layout_marginTop="22dp"
+        android:background="@color/blue2"
+        android:gravity="center"
+        android:text="回复"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/xiaoxi_home"
+    android:layout_marginTop="22dp"
+android:id="@+id/iv_xiaoxi"
+    android:gravity="center"
+    android:visibility="gone"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="@dimen/margin_left_ringht"
+    android:layout_height="wrap_content" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_chakan"
+        android:layout_width="40dip"
+        android:layout_height="20dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_left_ringht"
+        android:layout_marginTop="22dp"
+        android:background="@color/blue2"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="查看"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+    <!--android:layout_below="@id/tv_desc"-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="#e9efef" />
+</RelativeLayout>

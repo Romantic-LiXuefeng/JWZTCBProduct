@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+   
+
+    <com.jwzt.caibian.view.PullToRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/prl_refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbars="none" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jwzt.caibian.view.PullableScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+            
+
+                  
+                    <com.jwzt.caibian.widget.MyListView
+                        android:id="@+id/mlv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#f2f2f2"
+                        android:dividerHeight="2dp"
+                        android:listSelector="@android:color/white" />
+            </RelativeLayout>
+        </com.jwzt.caibian.view.PullableScrollView>
+
+        <include
+            android:id="@+id/loadmore_view"
+            layout="@layout/load_more" />
+    </com.jwzt.caibian.view.PullToRefreshLayout>
+
+</RelativeLayout>

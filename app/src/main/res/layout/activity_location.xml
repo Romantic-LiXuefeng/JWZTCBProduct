@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8f0ee" >
+
+   <include 
+      layout="@layout/my_head_layout"
+      android:id="@+id/in_title"
+       />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_style_text_size" />
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/in_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="11dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/tag_grey_bg"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/search"
+            android:hint="搜索附近位置"
+            android:textColorHint="#bdbdbd"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <ListView 
+        android:background="@android:color/white"
+        android:id="@+id/lv"
+        android:divider="@android:color/white"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/white"
+        android:layout_below="@id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        />
+
+</RelativeLayout>

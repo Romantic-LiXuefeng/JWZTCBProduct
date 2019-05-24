@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_live_pager_background" >
+
+    <RelativeLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:clickable="false" />
+
+        <com.jwzt.caibian.view.CameraHintView
+            android:id="@+id/camera_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_new_is_show_beauty"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="94dp"
+            android:layout_marginLeft="64dp"
+            android:background="@drawable/new_bg_background"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/LL_new_beauty_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.jwzt.caibian.view.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="美颜调节"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="15sp" />
+				<RelativeLayout 
+				        android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="20dp">
+	                <SeekBar
+	                    android:id="@+id/new_beauty_seekbar"
+	                    android:layout_marginTop="3dp"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:max="100"
+	                    android:focusable="true"
+	                    android:maxHeight="2dp"
+	                    android:minHeight="2dp"
+	                    android:paddingLeft="0dp"
+	                    android:paddingRight="0dp"
+	                    android:progressDrawable="@drawable/new_seekbar_progress"
+	                    android:thumb="@drawable/new_seekbar_thumb"
+	                    android:thumbOffset="0dp" />
+	                
+	                <com.jwzt.caibian.view.FontTextView 
+	                    android:id="@+id/tv_new_beauty"
+	                    android:layout_below="@id/new_beauty_seekbar"
+	                    android:layout_marginLeft="2dp"
+	                    android:layout_marginTop="2dp"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:textSize="10sp"
+	                    android:text="0"/>
+	              </RelativeLayout>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL_new_beauty_seekbar"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.jwzt.caibian.view.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="亮度调节"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="15sp" />
+				<RelativeLayout android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="20dp">
+
+                <SeekBar
+                    android:id="@+id/new_light_seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:focusable="true"
+                    android:max="100"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:progressDrawable="@drawable/new_seekbar_progress"
+                    android:thumb="@drawable/new_seekbar_thumb"
+                    android:thumbOffset="0dp" />
+
+                <com.jwzt.caibian.view.FontTextView 
+                    	android:id="@+id/tv_new_light"
+	                    android:layout_below="@id/new_light_seekbar"
+	                    android:layout_marginLeft="2dp"
+	                    android:layout_marginTop="2dp"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:textSize="10sp"
+	                    android:text="0"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/new_tv_show_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/new_bg_bac_text_kground"
+        android:padding="7dp"
+        android:text="这里是提示"
+        android:textColor="#dddce3"
+         />
+
+    <ImageView
+        android:id="@+id/iv_back_return"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/new_back_return" />
+
+    <include
+        android:id="@+id/new_activity_live_left"
+        android:layout_width="49dp"
+        android:layout_height="match_parent"
+        layout="@layout/new_activity_live_item_left"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_new_top_isshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <include
+            android:id="@+id/new_activity_live_top"
+            layout="@layout/new_activity_live_item_top" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_activity_live_top"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_ssml"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="实时码流"
+                android:textColor="#dddce3"
+                android:textSize="12sp" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_ssmlbh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@+id/tv_ssml"
+                android:text="0 KB/S"
+                android:textColor="#dddce3"
+                android:textSize="12sp" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_total_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="29dp"
+                android:layout_marginStart="32dp"
+                android:layout_toEndOf="@+id/tv_ssmlbh"
+                android:text="总流量"
+                android:textColor="#dddce3"
+                android:textSize="12sp" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_total_flowbh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/tv_total_flow"
+                android:text="0 M"
+                android:textColor="#dddce3"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/new_activity_live_right"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        layout="@layout/new_activity_live_item_right" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pic_tl"
+        android:layout_width="213dp"
+        android:layout_height="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/new_activity_live_left"
+        android:background="@drawable/new_bg_background"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="8dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_uploading_pic"
+            android:layout_width="92dp"
+            android:layout_height="56dp"
+            android:background="@drawable/new_iv_uploading_pic"
+            android:gravity="center"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_add_pic"
+            android:layout_width="91dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/new_iv_add_pic"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:text="+"
+            android:textColor="#747373"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/bt_end_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/iv_uploading_pic"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/iv_add_pic"
+            android:layout_below="@id/iv_uploading_pic"
+            android:layout_marginTop="7dp"
+            android:background="#27c927"
+            android:text="开始推流"
+            android:textColor="#dddce3"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/bt_start_push_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/iv_uploading_pic"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/bt_end_live"
+            android:background="#27c927"
+            android:text="开始推流"
+            android:textColor="#dddce3"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    
+    <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_new_Network_signal_is_not_stable"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="@color/red"
+            android:text="网络信号不稳定" />
+
+</RelativeLayout>

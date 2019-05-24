@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eff0f0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/a5"
+        android:gravity="center"
+        android:text="任务群组"
+        android:textColor="@android:color/white"
+        android:textSize="19sp" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="14dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="15dp"   
+        android:layout_marginTop="11dp"
+        android:src="@drawable/back_white" />
+
+    <GridView
+        android:id="@+id/gv"    
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:background="@android:color/white"   
+        android:listSelector="@android:color/white"
+        android:numColumns="4"
+        android:paddingBottom="10dp"
+         />
+    <com.jwzt.caibian.view.FontTextView
+        android:layout_below="@id/gv"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv_logo"
+        style="@style/live_setting"
+        android:text="消息免打扰" />
+    <com.jwzt.caibian.widget.SwitchView
+        android:id="@+id/sv_logo"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:layout_alignTop="@id/tv_logo"
+        android:layout_alignParentRight="true"
+         android:layout_marginTop="14dp"
+         android:layout_marginRight="15dp"
+        />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_view_chat"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_logo"
+        android:layout_marginTop="1dp"
+        android:text="查看聊天内容" />
+    <ImageView 
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@id/tv_view_chat"
+        android:src="@drawable/grey_arrow"
+        />
+  
+
+</RelativeLayout>

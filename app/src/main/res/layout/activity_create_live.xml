@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_floder_press" >
+
+   <include 
+       android:id="@+id/in_title"
+       layout="@layout/my_head_layout"/>
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:text="完成"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_style_text_size" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_below="@id/in_title"
+        android:layout_height="wrap_content">
+    <TextView 
+
+        android:id="@+id/tv_live_show"
+        android:text="直播主题 :"
+
+        android:layout_width="wrap_content"
+        style="@style/live_create"/>
+
+    <EditText
+        android:id="@+id/tv_theme"
+        style="@style/live_create"
+        android:paddingLeft="0dp"
+        android:layout_toRightOf="@id/tv_live_show"
+
+        android:textColorHint="@color/grey9"
+        android:background="@android:color/white"
+        android:hint="请输入" />
+
+    <View
+        android:id="@+id/bar1"
+        style="@style/live_create_bar"
+        android:layout_below="@id/tv_theme" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_start"
+        style="@style/live_create"
+        android:layout_below="@id/bar1"
+
+        android:drawableRight="@drawable/dark_grey_arrow"
+        
+        android:paddingRight="10dp"
+        android:text="开始时间：2016-06-10 18:30"
+        android:textColor="@color/grey_pressed"
+        />
+
+    <View
+        android:id="@+id/bar2"
+        style="@style/live_create_bar"
+        android:layout_below="@id/tv_start" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_end"
+        style="@style/live_create"
+        android:layout_below="@id/bar2"
+        android:textColor="@color/grey_pressed"
+        android:drawableRight="@drawable/dark_grey_arrow"
+        android:paddingRight="10dp"
+        android:text="结束时间：2016-06-10 09:30" />
+
+    <View
+        android:id="@+id/bar3"
+        style="@style/live_create_bar"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_end" />
+    </RelativeLayout>
+
+    <!--
+             <FrameLayout 
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/bar3"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="80dp"
+            
+            ></FrameLayout>
+    -->
+
+</RelativeLayout>

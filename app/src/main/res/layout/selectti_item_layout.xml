@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.jwzt.caibian.widget.SwipeMenuLayout
+        android:id="@+id/sml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ios="true"
+        app:leftSwipe="true"
+        app:swipeEnable="true">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/press_selector"
+            android:gravity="center_vertical">
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="天津宁河区发生2.0级地震"
+                android:textColor="@color/grey3"
+                android:textSize="@dimen/main_body_title_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/rl_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_shenhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待审" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/tv_shenhe"
+                    android:text="未指派" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_status"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/iv"
+                android:gravity="center_vertical">
+
+                <com.jwzt.caibian.view.FontTextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="4月12日"
+                    android:textColor="@color/greybd" />
+
+                <com.jwzt.caibian.view.FontTextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/tv_date"
+                    android:text="邮箱汇聚"
+                    android:textColor="@color/greybd" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/xiansuoedit_item_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="6dp"
+                        android:text="编辑" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/xiansuoxuanti_item_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="6dp"
+                        android:text="派遣任务"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/rl"
+            android:layout_alignTop="@id/rl"
+            android:orientation="horizontal">
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_share"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#c8c7cd"
+                android:gravity="center"
+                android:text="转发"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_delete"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#fe3c2e"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.jwzt.caibian.widget.SwipeMenuLayout>
+
+</RelativeLayout>

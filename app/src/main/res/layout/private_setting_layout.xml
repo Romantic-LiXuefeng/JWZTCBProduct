@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人设置布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_divider"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/rl_title1"
+        layout="@layout/headlayout3" />
+    <ScrollView 
+         android:layout_below="@id/rl_title1"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_change"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="更换头像"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_change"
+        android:layout_alignRight="@id/ftv_change"
+        android:layout_alignTop="@id/ftv_change"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.widget.RoundedImageView
+        android:id="@+id/iv_headPhoto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/ftv_change"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/headphoto_left_margin"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_photo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/new_tx"
+        app:border_color="@color/grey"
+        app:border_width="@dimen/border_width"
+        app:corner_radius="10dip"
+        app:oval="true" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_change"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="用户名"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_username"
+        android:layout_alignRight="@id/ftv_username"
+        android:layout_alignTop="@id/ftv_username"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ftv_username"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_username"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_username"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="手机号"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_phone_number"
+        android:layout_alignRight="@id/ftv_phone_number"
+        android:layout_alignTop="@id/ftv_phone_number"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+        android:layout_alignTop="@id/ftv_phone_number"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_phone"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_car_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_phone_number"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="车牌号"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_car_number"
+        android:layout_alignRight="@id/ftv_car_number"
+        android:layout_alignTop="@id/ftv_car_number"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+        android:layout_alignTop="@id/ftv_car_number"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_car"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+     <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_age"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_car_number"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="年龄"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_age"
+        android:layout_alignRight="@id/ftv_age"
+        android:layout_alignTop="@id/ftv_age"
+        
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+        android:layout_alignTop="@id/ftv_age"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_age"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+   <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_zodiac"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_age"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="星座"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_zodiac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_zodiac"
+        android:layout_alignRight="@id/ftv_zodiac"
+        android:layout_alignTop="@id/ftv_zodiac"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_zodiac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_alignTop="@id/ftv_zodiac"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_zodiac"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+     <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_hobby"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_zodiac"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="兴趣爱好"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_hobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_hobby"
+        android:layout_alignRight="@id/ftv_hobby"
+        android:layout_alignTop="@id/ftv_hobby"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_hobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:layout_alignTop="@id/ftv_hobby"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_hobby"
+        android:gravity="center_vertical"
+        android:text="@string/please_input"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_gender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_hobby"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="性别"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_gender"
+        android:layout_alignRight="@id/ftv_gender"
+        android:layout_alignTop="@id/ftv_gender"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_alignTop="@id/ftv_gender"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_gender"
+        android:gravity="center_vertical"
+        android:text="@string/secret"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_gender"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="生日"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_birthday"
+        android:layout_alignRight="@id/ftv_birthday"
+        android:layout_alignTop="@id/ftv_birthday"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:layout_alignTop="@id/ftv_birthday"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_birthday"
+        android:gravity="center_vertical"
+        android:text="@string/please_select"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_education"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_birthday"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="教育水平"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_education"
+        android:layout_alignRight="@id/ftv_education"
+        android:layout_alignTop="@id/ftv_education"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_alignTop="@id/ftv_education"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_education"
+        android:gravity="center_vertical"
+        android:text="@string/please_select"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_live_place"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_education"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="所在地"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_live_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_live_place"
+        android:layout_alignRight="@id/ftv_live_place"
+        android:layout_alignTop="@id/ftv_live_place"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_live_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ftv_live_place"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_live_place"
+        android:gravity="center_vertical"
+        android:text="@string/please_select"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+   <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_income"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_live_place"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="收入水平"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_income"
+        android:layout_alignRight="@id/ftv_income"
+        android:layout_alignTop="@id/ftv_income"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ftv_income"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_income"
+        android:gravity="center_vertical"
+        android:text="@string/please_select"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+
+ <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/ftv_profession"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ftv_income"
+        android:layout_marginTop="@dimen/horizontal_bar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_standard"
+        android:text="职业"
+        android:textColor="@color/lighter_black"
+        android:textSize="@dimen/discover_caster_textsize" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ftv_profession"
+        android:layout_alignRight="@id/ftv_profession"
+        android:layout_alignTop="@id/ftv_profession"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:src="@drawable/grey_arow_right" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ftv_profession"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_toLeftOf="@id/iv_arrow_profession"
+        android:gravity="center_vertical"
+        android:text="@string/please_select"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/famous_name_textsize" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_unlogin"
+         android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/iv_arrow_profession"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/a5"
+        android:textSize="@dimen/famous_name_textsize" />
+    </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/view_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey7"
+        android:visibility="invisible" />
+
+</RelativeLayout>

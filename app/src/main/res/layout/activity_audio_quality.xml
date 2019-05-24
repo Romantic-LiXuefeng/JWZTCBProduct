@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0" >
+
+<include 
+    android:id="@+id/in_title"
+    layout="@layout/my_head_layout"
+    />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_audio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/in_title"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:text="音频码流"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="@dimen/icon_left"
+        android:layout_below="@id/in_title"
+        android:layout_marginTop="18dp"
+        android:background="@color/a5" />
+
+    <GridView
+        android:id="@+id/gv"
+        android:listSelector="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_audio"
+        android:numColumns="3"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

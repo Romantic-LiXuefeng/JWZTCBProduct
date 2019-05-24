@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/margin_standard"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:background="@drawable/take_phote_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_standard"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:orientation="vertical" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="录音"
+            android:textColor="@color/lighter_grey"
+            android:textSize="@dimen/grey_text_size2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/color_divider" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_take_audio"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="拍摄"
+            android:clickable="true"
+            android:textColor="@color/a5"
+            android:textSize="@dimen/radio_name_size" />
+         <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/color_divider" />
+          <com.jwzt.caibian.view.FontTextView
+              android:id="@+id/tv_from_audio"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="从相册选择"
+            android:clickable="true"
+            android:textColor="@color/a5"
+            android:textSize="@dimen/radio_name_size" />
+    </LinearLayout>
+    <com.jwzt.caibian.view.FontTextView 
+        android:id="@+id/tv_cancel_audio"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="取消"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_marginLeft="@dimen/margin_standard"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:background="@drawable/take_phote_bg"
+        android:textSize="@dimen/name_size"
+        
+        />
+
+</LinearLayout>

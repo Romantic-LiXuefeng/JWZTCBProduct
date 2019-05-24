@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0" >
+
+    <include 
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout"
+        />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_resolution"
+        style="@style/quality"
+        android:layout_below="@id/in_title"
+        android:text="视频分辨率" />
+
+    <View
+        style="@style/quality_bar"
+        android:layout_below="@id/in_title" />
+
+    <GridView
+        android:id="@+id/gv_resolution"
+        style="@style/quality_gv"
+        android:layout_below="@id/tv_resolution"
+        android:layout_marginTop="1dp" />
+    
+    
+    
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_framerate"
+        style="@style/quality"
+        android:layout_below="@id/gv_resolution"
+        android:layout_marginTop="15dp"
+        android:text="视频帧率" />
+
+    <View
+        style="@style/quality_bar"
+        android:layout_below="@id/gv_resolution"
+        android:layout_marginTop="33dp"
+         />
+
+    <GridView
+        android:id="@+id/gv_framerate"
+        style="@style/quality_gv"
+        android:layout_below="@id/tv_framerate"
+        android:layout_marginTop="1dp" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_bitrate"
+        style="@style/quality"
+        android:layout_below="@id/gv_framerate"
+        android:layout_marginTop="15dp"
+        android:text="视频码流" />
+
+    <View
+        style="@style/quality_bar"
+        android:layout_below="@id/gv_framerate"
+        android:layout_marginTop="33dp"
+         />
+
+    <GridView
+        android:id="@+id/gv_bitrate"
+        style="@style/quality_gv"
+        android:layout_below="@id/tv_bitrate"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>

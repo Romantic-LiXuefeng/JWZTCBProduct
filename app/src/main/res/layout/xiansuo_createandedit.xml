@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<include
+		android:id="@+id/in_title"
+		layout="@layout/my_head_layout" />
+
+
+	<ScrollView
+		android:id="@+id/sv"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/in_title">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingBottom="10dp"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:id="@+id/tv_xiansuotitle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey6"
+					android:text="线索标题"/>
+
+
+				<EditText
+					android:id="@+id/titleName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
+					android:textColor="@color/grey3"
+					android:layout_toEndOf="@+id/tv_xiansuotitle"
+					android:layout_centerVertical="true"
+					android:hint="请输入标题"/>
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:id="@+id/tv_xiansuosource"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey6"
+					android:text="线索来源"/>
+
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="邮箱汇聚"
+					android:layout_toEndOf="@+id/tv_xiansuosource"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey3"
+					android:layout_marginLeft="10dp"/>
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:id="@+id/tv_xiansuophone"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey6"
+					android:text="联系电话"/>
+
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="13522626875"
+					android:layout_toEndOf="@+id/tv_xiansuophone"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey3"
+					android:layout_marginLeft="10dp"/>
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="10dp">
+
+				<TextView
+					android:id="@+id/tv_xiansuolocation"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey6"
+					android:text="上报位置"/>
+
+
+				<TextView
+					android:id="@+id/tv_location"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="上地嘉华大厦"
+					android:layout_toEndOf="@+id/tv_xiansuolocation"
+					android:layout_centerVertical="true"
+					android:textColor="@color/grey3"
+					android:layout_marginLeft="10dp"/>
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/location_blue"
+					android:layout_marginRight="10dp"/>
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="内容详情"
+				android:textColor="@color/grey6"
+				android:padding="10dp"/>
+
+
+			<WebView
+				android:id="@+id/tv_content"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/view_bar2"
+				android:lineSpacingExtra="15dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="23dp"
+				android:textColor="#818181"
+				android:textSize="17sp" />
+
+			<com.jwzt.caibian.widget.MyGridView
+				android:id="@+id/gv_resource"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tv_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:numColumns="4"
+				android:divider="@android:color/white"
+				android:dividerHeight="10dp" />
+
+
+		</LinearLayout>
+	</ScrollView>
+
+</RelativeLayout>

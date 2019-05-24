@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/sblash" >
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+		android:visibility="gone"
+        android:layout_alignParentBottom="true">
+        
+        <ImageView 
+            android:id="@+id/iv_newlogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/newlogo"/>
+        
+        <LinearLayout 
+            android:layout_centerVertical="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_toRightOf="@id/iv_newlogo">
+        
+	        <TextView 
+	            android:layout_centerVertical="true"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/a5"
+	            android:textSize="15sp"
+	            android:text="移动采编"/>
+	        <TextView 
+	            android:layout_marginTop="5dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/black"
+	            android:textSize="8sp"
+	            android:text="与声音同速的新闻采集客户端"/>
+        
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+
+</RelativeLayout>

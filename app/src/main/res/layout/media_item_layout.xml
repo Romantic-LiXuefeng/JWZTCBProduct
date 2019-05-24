@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_resource"
+    android:layout_width="match_parent"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:layout_height="match_parent">
+
+
+<!-- <View
+        android:id="@+id/view_bar"
+        android:layout_width="11dp"
+        android:layout_height="63dp"
+        android:background="@android:color/white" />-->
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="85dp"
+        android:layout_height="63dp"
+        android:layout_toRightOf="@id/view_bar"
+        android:scaleType="fitXY"
+        android:src="@drawable/replace" />
+
+    <LinearLayout
+        android:layout_width="85dp"
+        android:layout_height="15dp"
+
+        android:layout_alignParentBottom="true"
+android:gravity="center_vertical"
+        android:id="@+id/ll_video_audio"
+        android:background="@color/tranlstblack">
+<!--  android:layout_alignBottom="@id/iv"
+        android:layout_alignRight="@id/iv"-->
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+
+            android:src="@drawable/play_renwu" />
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="match_parent"
+            android:textSize="9sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

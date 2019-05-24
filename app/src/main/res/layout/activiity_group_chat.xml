@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0" >
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <com.jwzt.caibian.view.PullToRefreshLayout
+        android:id="@+id/prl_messagerefersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_title"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbars="none" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jwzt.caibian.view.PullableScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <com.jwzt.caibian.widget.MyListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/in_title"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@android:color/white" />
+        </com.jwzt.caibian.view.PullableScrollView>
+
+        <include
+            android:id="@+id/loadmore_view"
+            layout="@layout/load_more" />
+    </com.jwzt.caibian.view.PullToRefreshLayout>
+
+</RelativeLayout>

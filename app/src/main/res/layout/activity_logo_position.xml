@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eff0f0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <include 
+    android:id="@+id/in_title"
+    layout="@layout/my_head_layout"/>
+    <GridView 
+        android:id="@+id/gv"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/in_title"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:horizontalSpacing="15dp"
+       android:verticalSpacing="15dp"
+       android:numColumns="2"
+        ></GridView>
+    
+
+</RelativeLayout>

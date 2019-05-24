@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        >
+        <com.jwzt.caibian.view.FontTextView 
+            android:id="@+id/tv1"
+            android:background="@drawable/press_selector"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/blue3"
+           android:text="进行中"
+            />
+         <!-- <com.jwzt.caibian.view.FontTextView 
+            android:id="@+id/tv2"
+            android:visibility="gone"
+             android:background="@drawable/press_selector"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/grey3"
+           android:text="未开始"
+            /> -->
+
+         <com.jwzt.caibian.view.FontTextView
+             android:id="@+id/tv3"
+              android:background="@drawable/press_selector"
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="已结束"
+             android:textColor="@color/grey3"
+             android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

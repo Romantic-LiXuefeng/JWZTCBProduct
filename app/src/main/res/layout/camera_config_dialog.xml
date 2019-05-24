@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/swEnableAlbum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/swEnableAlbum"
+                android:text="@string/isShowGalleryBtn"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/cameraConfig"
+            android:textColor="#ffffff"
+            android:textSize="17dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgIsRearCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_stroke"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFrontCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cameraFront"/>
+
+            <RadioButton
+                android:id="@+id/rbRearCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cameraRear"/>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="10dp">
+
+            <CheckBox
+                android:id="@+id/cbRecordSupportPlayMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/recordWithMusic"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/uiDirection"
+            android:textColor="#ffffff"
+            android:textSize="17dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgOrientation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_stroke"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbOrientationPortrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lockVertical"/>
+
+            <RadioButton
+                android:id="@+id/rbOrientationLandscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lockHorizontal"/>
+
+            <RadioButton
+                android:id="@+id/rbOrientationAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/autoSensor"/>
+        </RadioGroup>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCameraSupport"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="20dp">
+
+                <!-- 视频 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cbRec"
+                        android:layout_marginTop="-20dp"
+                        android:background="@drawable/layout_stroke"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/recordDurationMin"
+                                android:textColor="#ffffff"
+                                android:textSize="17dp"/>
+
+                            <EditText
+                                android:id="@+id/etCameraMinTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="@string/hint_record_duration_limit"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCameraMaxTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/recordDurationMax"
+                                android:textColor="#ffffff"
+                                android:textSize="17dp"/>
+
+                            <EditText
+                                android:id="@+id/etCameraMaxTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="@string/hint_record_duration_limit"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbRec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="#000000"
+                        android:text="@string/video"/>
+                </RelativeLayout>
+
+                <!-- MV -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cbMV"
+                        android:layout_marginTop="-20dp"
+                        android:background="@drawable/layout_stroke"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/recordDurationMin"
+                                android:textColor="#ffffff"
+                                android:textSize="17dp"/>
+
+                            <EditText
+                                android:id="@+id/etCameraMVMinTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="@string/hint_record_duration_limit"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/recordDurationMax"
+                                android:textColor="#ffffff"
+                                android:textSize="17dp"/>
+
+                            <EditText
+                                android:id="@+id/etCameraMVMaxTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="@string/hint_record_mv_max_limit"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbMV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="#000000"
+                        android:text="@string/record_short_mv"/>
+                </RelativeLayout>
+
+                <!-- 照片 -->
+
+                <CheckBox
+                    android:id="@+id/cbPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/record_image"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCameraSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="@string/recordSupportMode"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/takephoto_mode"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <RadioGroup
+                    android:id="@+id/rgCameraMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RadioButton
+                        android:id="@+id/rbMultiShoot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/takePhotoMore"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rbSingleShoot"
+                            android:layout_marginTop="-20dp"
+                            android:background="@drawable/layout_stroke"
+                            android:padding="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                >
+
+                                <Switch
+                                    android:id="@+id/swIsSaveToAlbum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textOff="  "
+                                    android:textOn="  "
+                                    android:thumb="@drawable/switch_thumb"
+                                    android:track="@drawable/switch_track"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_toRightOf="@+id/swIsSaveToAlbum"
+                                    android:background="#000000"
+                                    android:text="@string/takePhotoSingleIsSave"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17dp"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RadioButton
+                            android:id="@+id/rbSingleShoot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/black"
+                            android:text="@string/takePhotoSingle"/>
+
+                    </RelativeLayout>
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/takephoto_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black"
+                android:text="@string/camera_takephoto_mode_config"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/swUseCustomAlbum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/swUseCustomAlbum"
+                android:text="@string/isEnableCustomGallery"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:text="@string/isEnableFaceu"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgCameraFaceGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_stroke"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbEnableFace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/open"/>
+
+                <RadioButton
+                    android:id="@+id/rbUnableFace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/close"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 水印 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cbOsd"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/record_osd_end_duration"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etOsdEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="@string/hint_record_osd_end"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbOsd"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/cameraOSD"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="10dp">
+
+            <CheckBox
+                android:id="@+id/cbAntiChange"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/enableAntiChange"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="10dp">
+
+            <CheckBox
+                android:id="@+id/cbEnableBeauty"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/enableBeautify"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="10dp">
+
+            <CheckBox
+                android:id="@+id/cbFrontMirror"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/enableFrontMirror"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

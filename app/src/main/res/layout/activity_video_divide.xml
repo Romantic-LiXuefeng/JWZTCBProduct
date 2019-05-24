@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--播放器模块-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0000">
+
+            <VideoView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+            <ImageButton
+                android:id="@+id/pause_playback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#0000"
+                android:onClick="onClickPlayback"
+                android:src="@drawable/btn_pause" />
+        </RelativeLayout>
+
+        <!--进度条-->
+        <com.jwzt.caibian.widget.VideoEditProgressBar
+            android:id="@+id/vedio_progress"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@color/transparent" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/divide_delete_tip"
+                android:textColor="#aaaaaa" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/scroll_view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jwzt.caibian.view.ObservableHorizontalScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/recycler_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_frame_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </com.jwzt.caibian.view.ObservableHorizontalScrollView>
+
+            <!--底部按钮模块-->
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/iv_btn_cut"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:onClick="onClickAdd"
+                    android:src="@drawable/video_cut" />
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_toLeftOf="@id/iv_btn_cut"
+                    android:src="@drawable/video_delete"
+                    android:onClick="onClickDone"/>
+
+                <ImageView
+                    android:id="@+id/iv_merge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@id/iv_btn_cut"
+                    android:onClick="onClickMerge"
+                    android:src="@drawable/video_merge" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/middle_line_image"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/frame_selector_middle_line" />
+    </FrameLayout>
+
+    <!--头部标题模块-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_vedio_back"
+            android:onClick="onClickBack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/title_video_divide"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

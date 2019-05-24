@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/a5" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/red_head_total_height"
+            android:gravity="center"
+            android:padding="@dimen/red_head_padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/radio_name_size" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/back_white2" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginRight="@dimen/margin_standard"
+            android:gravity="right"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_text_size" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_head"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:background="@drawable/bg_login_et"
+        android:drawablePadding="@dimen/margin_standard"
+        android:hint="请输入您的年龄"
+        android:paddingLeft="@dimen/margin_standard"
+        android:textColorHint="@color/light_grey"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/a5" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/red_head_total_height"
+        android:gravity="center"
+        android:padding="@dimen/red_head_padding"  
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/radio_name_size"
+         />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/back_white2" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/margin_standard"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/small_text_size" />
+
+</RelativeLayout>

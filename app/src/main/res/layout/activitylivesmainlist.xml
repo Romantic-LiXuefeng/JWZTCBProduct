@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0" >
+
+    <LinearLayout
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/a5"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/title_style_left"
+
+            android:src="@drawable/back_white" />
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_titles"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+
+            android:gravity="center"
+            android:text="图片质量"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_create1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+   <com.jwzt.caibian.view.PullToRefreshLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/prl_refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:focusable="false"
+       android:layout_below="@id/in_title"
+        android:focusableInTouchMode="false"
+        android:scrollbars="none"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentStart="true">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jwzt.caibian.view.PullableScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+
+            <com.jwzt.caibian.widget.DragSortListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/greyc"
+                android:dividerHeight="0.5dp"
+
+                android:listSelector="@color/greyc" />
+
+
+       </com.jwzt.caibian.view.PullableScrollView>
+
+        <include
+            android:id="@+id/loadmore_view"
+            layout="@layout/load_more" />
+    </com.jwzt.caibian.view.PullToRefreshLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:id="@+id/iv_zanwu"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/zanwuzhibo"></ImageView>
+</RelativeLayout>

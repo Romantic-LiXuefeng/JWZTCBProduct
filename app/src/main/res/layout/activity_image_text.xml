@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2B3552"
+     >
+    
+   <FrameLayout
+        android:id="@+id/work_space"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="110dp"
+        android:background="#2B3552">
+
+        <com.jwzt.caibian.widget.ImageViewTouch
+            android:id="@+id/main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"/>
+        
+
+         <com.jwzt.caibian.widget.TextStickerView
+            android:id="@+id/text_sticker_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"/> 
+    </FrameLayout>
+    
+    
+    
+    
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="110dp"
+	    android:orientation="vertical" 
+	    android:layout_alignParentBottom="true"
+	    android:background="#F4F4F4"
+    >
+
+    
+
+
+        <LinearLayout
+            android:id="@+id/ratio_list_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical" >
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                >
+                
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#000000"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#CC6600"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF6666"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#00CCFF"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#000033"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#ff0000"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#53D265"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc"
+                    android:layout_weight="1"
+                    />
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_color8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF47BD"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                
+                <com.jwzt.caibian.view.FontTextView 
+                    android:id="@+id/tv_show_select"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="#000000"
+                    />
+                
+                
+                <View 
+                    android:layout_width="0.5px"
+                    android:layout_height="20dp"
+                    android:background="#CCCCCC"
+                    android:layout_marginLeft="20dp"
+                    />
+                
+                
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <com.jwzt.caibian.view.FontTextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="默认字体"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        />
+                    
+                    
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+            
+            
+            
+            
+            
+            
+        </LinearLayout>
+    
+   
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#CCCCCC"
+        />
+    
+    <EditText 
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:hint="请输入插入的文字"
+        android:textSize="14sp"
+        />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#CCCCCC"
+        />
+    
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        >
+        
+      
+        
+        
+        <LinearLayout 
+            android:id="@+id/back_to_main"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="10dp"
+	        android:gravity="center"
+            >
+        
+        <ImageView
+	        android:layout_width="15dp"
+	        android:layout_height="15dp"
+	        android:src="@drawable/image_edit_back1" />
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/back_return"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+	        android:layout_centerInParent="true"
+	        android:layout_marginLeft="10dp"
+	        android:gravity="center"
+            >
+        <ImageView
+	        android:layout_width="15dp"
+	        android:layout_height="15dp"
+	        android:src="@drawable/ic_return" />
+        </LinearLayout>
+         <LinearLayout 
+          	 android:id="@+id/back_apply"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:gravity="center"
+            >
+        <ImageView
+	        android:layout_width="15dp"
+	        android:layout_height="15dp"
+	        android:src="@drawable/ic_img_apply" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#CCCCCC"
+        />
+    
+    </LinearLayout>
+
+</RelativeLayout>

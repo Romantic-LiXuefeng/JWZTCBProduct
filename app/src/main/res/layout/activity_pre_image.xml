@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/work_space"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#2B3552" >
+
+        <com.jwzt.caibian.widget.ImageViewTouch
+            android:id="@+id/main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="bottom"
+            android:background="#66ffffff" >
+
+            <FrameLayout
+                android:id="@+id/frameline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/ll_pic_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical" >
+
+                    <com.jwzt.caibian.view.FontTextView
+                        android:id="@+id/tv_pic_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="图片的名称"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_pic_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017年2月9日"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_pic_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="200KB"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/popuwindows"
+                    android:background="#b6c5dc" >
+
+                    <EditText
+                        android:id="@+id/et_video_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e9f2fc"
+                        android:gravity="center_vertical"
+                        android:hint="填写视频介绍"
+                        android:paddingLeft="15dp" />
+
+                    <View
+                        android:id="@+id/view_empty"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/tv_save"
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_toLeftOf="@id/view_empty"
+                        android:background="@drawable/bg_pop"
+                        android:gravity="center"
+                        android:text="保存"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/et_save2"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_save" />
+
+                    <TextView
+                        android:id="@+id/tv_upload"
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/view_empty"
+                        android:background="@drawable/bg_pop"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5px"
+                android:layout_below="@+id/frameline"
+                android:background="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line" >
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="0dp"
+                    android:background="@drawable/back_arrow" />
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="70dp"
+                    android:background="@drawable/ic_image_share" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_image_edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

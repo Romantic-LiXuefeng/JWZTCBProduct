@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:paddingBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_time"
+        style="@style/tvTimeStyle" />
+
+    <com.jwzt.caibian.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="@dimen/chat_margin_top"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/replace" />
+     
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/civ"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/civ"
+        android:text="欧阳娜娜"
+        android:textColor="@color/grey3"
+        android:textSize="16sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/civ"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/tv_name"
+        android:text="新闻中心"
+        android:visibility="invisible"
+        android:textColor="#c8cbca"
+        android:textSize="11sp" />
+    
+    <!-- <RelativeLayout 
+        android:id="@+id/rl_audio"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+         android:layout_below="@id/tv_group"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:layout_alignRight="@id/tv_name"
+        android:background="@drawable/bg_message_selector"
+        >
+        <ImageView 
+            android:id="@+id/img_audioplay"
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:src="@drawable/myyuyin03"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+       
+    </RelativeLayout> -->
+
+    <!-- <com.jwzt.caibian.widget.RoundedImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignRight="@id/tv_name"
+        android:layout_below="@id/tv_group"
+        android:layout_marginTop="12dp"
+        app:corner_radius="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/replace"
+      /> -->
+      <!-- <View
+        android:id="@+id/iv_message_shadow"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:layout_alignRight="@id/tv_name"
+        android:layout_below="@id/tv_group"
+        android:layout_marginTop="12dp"
+       android:background="@drawable/corner_pressed_selector2"
+        
+      /> -->
+    <RelativeLayout
+        android:id="@+id/rl_audio"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/tv_name"
+        android:layout_below="@+id/civ"
+        android:background="@drawable/bg_message_selector"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/img_audioplay"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rightaudioplayanim" />
+    </RelativeLayout>
+
+       <com.jwzt.caibian.view.FontTextView
+           android:id="@+id/tv_audiotime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignTop="@+id/rl_audio"
+           android:layout_toLeftOf="@+id/rl_audio"
+           android:text="10"
+           android:layout_marginRight="5dp"
+           android:textColor="#bebebe" />
+
+</RelativeLayout>

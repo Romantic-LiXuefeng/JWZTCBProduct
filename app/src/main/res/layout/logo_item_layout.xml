@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jwzt.caibian.widget.RoundedImageView
+        android:id="@+id/riv"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        app:corner_radius="6dp" />
+    <ImageView 
+        android:id="@+id/iv_select"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/quality_check"
+        android:layout_alignRight="@id/riv"
+        android:layout_alignTop="@id/riv"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/riv"
+        android:layout_alignLeft="@id/riv"
+        android:layout_alignRight="@id/riv"
+        android:background="#4d000000"
+        android:gravity="center"
+        android:text="中央电视台"
+        android:textSize="12sp"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

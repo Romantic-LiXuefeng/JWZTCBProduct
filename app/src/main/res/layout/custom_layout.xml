@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/black_bg" >
+
+    <View
+        android:id="@+id/view_slide"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:background="@drawable/green_bg" />
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:orientation="horizontal" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="正常模式"
+            android:textColor="@android:color/black"
+            android:textSize="11sp" />
+
+        <com.jwzt.caibian.view.FontTextView
+             android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="突出原声"
+            android:textColor="#878787"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</RelativeLayout>

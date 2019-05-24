@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/ll_ll"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_standard" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_standard"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/noScrollgridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dip"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" >
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_cancel_show"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_standard"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:layout_weight="1"
+            android:background="@drawable/alert_corner_right_bottom_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@android:color/white" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_standard"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:layout_weight="1"
+            android:background="@drawable/alert_corner_left_bottom_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/lighter_black" />
+    </LinearLayout>
+
+</LinearLayout>

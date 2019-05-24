@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/headlayout3"  />
+
+    <com.jwzt.caibian.view.PullableScrollView
+        android:id="@+id/qsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dip"
+           >
+
+            <TextView
+                android:id="@+id/tv_newsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:paddingLeft="10dip"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dip"
+                android:layout_height="50dp" >
+                
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#cccccc"
+                    android:textSize="14sp"
+                    android:text="4小时前" />
+  
+              
+                <TextView
+                    android:id="@+id/tv_fasongzhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dip"
+                    android:text="" />
+                
+           
+                <TextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:textSize="14sp"
+                    android:text="" />
+              
+            </LinearLayout>
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="15dip"
+                  android:background="#f5f5f5"
+                />
+            
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dip"
+                android:layout_height="50dp" >
+                
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3db6e1"
+                    android:textSize="18sp"
+                    android:text="消息内容" />
+                  
+                  
+               </LinearLayout>
+               
+             <View android:layout_width="fill_parent"
+                  android:layout_height="1dip"
+                  android:background="#f5f5f5"
+                />
+            
+            
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="match_parent"
+                android:layout_height="150dip" />
+
+            
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="15dip"
+                  android:background="#f5f5f5"
+                android:id="@+id/view_"
+                />
+            
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                  android:id="@+id/ll_me"
+                android:layout_marginLeft="10dip"
+                android:layout_height="50dp" >
+                
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3db6e1"
+                    android:textSize="18sp"
+                    android:text="消息回复" />
+                  
+                  
+               </LinearLayout>
+               
+             <View android:layout_width="fill_parent"
+                  android:layout_height="1dip"
+                  android:background="#f5f5f5"
+                />
+            
+            
+            <WebView
+                android:id="@+id/webView2"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dip" />
+
+        </LinearLayout>
+    </com.jwzt.caibian.view.PullableScrollView>
+
+   
+      
+
+   
+
+
+
+</LinearLayout>

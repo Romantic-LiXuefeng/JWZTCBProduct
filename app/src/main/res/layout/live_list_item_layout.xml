@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lives"
+    android:background="@drawable/press_selector" >
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/circle_right"
+        android:visibility="gone" />
+		<RelativeLayout 
+		    android:id="@+id/rl_iv"
+		    android:layout_width="0dip"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"
+		    android:layout_centerVertical="true"
+		    android:layout_height="50dp"
+		    android:layout_marginLeft="@dimen/margin_left_ringht"
+		    android:layout_toRightOf="@id/iv_select"
+		    android:scaleType="fitXY">
+		
+		    <ImageView
+		        android:id="@+id/iv"
+		        android:layout_width="65dp"
+		        android:layout_height="50dp"
+		        android:scaleType="fitXY"
+		        android:visibility="gone"
+		        android:src="@drawable/new_live_display" />
+		
+		    <ImageView
+		        android:id="@+id/iv_play"
+		        android:layout_width="13dp"
+		        android:layout_height="13dp"
+		        android:layout_alignRight="@+id/iv"
+		        android:layout_alignBottom="@+id/iv"
+		        android:layout_marginRight="3dp"
+		        android:layout_marginBottom="3dp"
+		         android:visibility="gone"
+		        android:src="@drawable/live_play" />
+		    </RelativeLayout>
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+
+        android:singleLine="true"
+        android:text="天津宁河区发生3.0级地震"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/title_style_text_size" />
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_below="@id/tv"
+		android:gravity="center_vertical"
+
+		android:layout_marginTop="@dimen/margin_text_text_top_bottom"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:gravity="center_vertical"
+			android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:src="@drawable/gj_pop"
+			android:id="@+id/iv_pop"
+			android:layout_height="wrap_content" />
+		<com.jwzt.caibian.view.FontTextView
+			android:id="@+id/tv_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_toRightOf="@id/rl_iv"
+			android:text=""
+android:maxEms="5"
+			android:minEms="3"
+			android:singleLine="true"
+
+			android:textColor="@color/greybd"
+			android:textSize="11sp" />
+		</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="17dp"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/iv_time"
+			android:src="@drawable/gj_time" />
+		<com.jwzt.caibian.view.FontTextView
+			android:id="@+id/tv_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+android:layout_marginLeft="5dp"
+			android:layout_toRightOf="@id/rl_iv"
+			android:text="3252354"
+			android:textColor="@color/greybd"
+			android:textSize="11sp" />
+	</LinearLayout>
+		<LinearLayout
+		android:layout_width="wrap_content"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="17dp"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/iv_dui"
+			android:src="@drawable/gj_duihao" />
+		<com.jwzt.caibian.view.FontTextView
+			android:id="@+id/tv_renwu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+android:layout_marginLeft="5dp"
+			android:layout_toRightOf="@id/rl_iv"
+			android:text=""
+			android:textColor="@color/greybd"
+			android:textSize="11sp" />
+	</LinearLayout>
+		<View
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="1dp"/>
+		<com.jwzt.caibian.view.FontTextView
+			android:id="@+id/tv_live"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="8dp"
+			android:paddingRight="8dp"
+			android:paddingBottom="2dp"
+			android:layout_marginRight="10dp"
+			android:paddingTop="2dp"
+			android:gravity="center"
+			android:text="正在直播"
+			android:textColor="@color/a5"
+			android:textSize="13sp" />
+		<!--android:layout_alignParentRight="true"
+		android:layout_marginRight="@dimen/margin_left_ringht"
+			android:layout_centerVertical="true"-->
+	</LinearLayout>
+
+<!--android:background="@drawable/live_text_bg"-->
+</RelativeLayout>

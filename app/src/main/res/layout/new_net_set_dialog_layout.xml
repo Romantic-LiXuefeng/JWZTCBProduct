@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    
+    android:background="@drawable/corner_white9"
+    android:orientation="vertical" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+       
+        android:background="@drawable/net_net_corner_up"
+        android:gravity="center"
+        android:text="当前处于数据网络,是否继续"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/new_only_one"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_uncheck"
+        android:text="仅一次" />
+
+    <View style="@style/netBarStyle" />
+
+   
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/new_always"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_uncheck"
+        android:background="@drawable/net_net_corner_down_selector"
+        android:text="始终" />
+    <View style="@style/netBarStyle" />
+    
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/new_not_do"
+        android:background="@drawable/net_net_corner_down_selector"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_uncheck"
+        android:text="取消" />
+
+
+</LinearLayout>
+</RelativeLayout>

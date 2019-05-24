@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/press_selector"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.jwzt.caibian.view.FontTextView 
+        android:id="@+id/tv"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="不显示位置"
+        android:paddingLeft="15dp"
+        android:textColor="@color/grey3"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/greye3"
+        android:layout_alignBottom="@id/tv"
+        />
+
+</RelativeLayout>

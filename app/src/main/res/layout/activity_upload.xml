@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#e8f0ee"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="BVcaster"
+        android:textSize="17sp"
+        android:background="@color/a5"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        />
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/plus"
+        />
+    <RadioGroup
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        >
+        <RadioButton
+            android:id="@+id/rb0"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rb_left_selector"
+            android:text="未上传"
+            android:textColor="@drawable/text_selector2"
+            android:gravity="center"
+            android:button="@null"
+            />
+         <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rb_right_selector"
+             android:text="已上传"
+             android:textColor="@drawable/text_selector2"
+            android:gravity="center"
+            android:button="@null"
+            />
+    </RadioGroup>
+ 	<FrameLayout
+ 	    android:id="@+id/fl"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent"
+ 	    android:layout_below="@id/rg"
+ 	    android:layout_marginTop="10dp"
+
+ 	    />
+
+</RelativeLayout>

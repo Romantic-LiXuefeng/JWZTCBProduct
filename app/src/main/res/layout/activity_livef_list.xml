@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eff0f0" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:src="@drawable/plus" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/in_title"
+        android:id="@+id/ll_tit"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#F1F3F5"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="45dp"
+                android:background="@drawable/newsbutton_bg2"
+                android:orientation="vertical"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#15B05E"
+                        android:text="·"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#15B05E"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#85D2AC"
+                    android:text="28"
+                    android:id="@+id/tv_rili_ri"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#15B05E"
+                    android:layout_height="0.5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/newsbutton_bg3"
+                    android:text="四月"
+                    android:id="@+id/tv_rili_yue"
+                    android:textSize="11sp"
+                    android:textColor="#15B05E"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_height="match_parent">
+
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="赶紧让他加我更换为日后"
+                android:id="@+id/tv_title"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:text="时间:"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/chuanlian_time"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:text="审核:"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/chuanlian_shenhe"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:text="创建:"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/btn_gray"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/chuanlian_create"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.jwzt.caibian.widget.DragSortListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/ll_tit"
+        android:divider="@color/transparent"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/transparent"
+        app:drag_handle_id="@+id/drag_handle" />
+
+    <LinearLayout
+        android:id="@+id/ll_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/dianzanline"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="#404548"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+
+            <TextView
+                android:id="@+id/tv_zanNum"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="审核通过" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/pinglinline"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="#5BB5DA"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+
+            <TextView
+                android:id="@+id/tv_jubao"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="保存" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+include ':app', ':ijkplayer', ':rdVECore', ':rdVEUISdk',":are", ':HRichEditorView', ':video-effect', ':video-compressor'

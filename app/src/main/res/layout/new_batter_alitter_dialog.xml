@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/new_dialog_shape"
+    >
+    <com.jwzt.caibian.view.FontTextView
+        android:paddingLeft="23dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingRight="23dp"
+        android:id="@+id/tv_stop_livetitle"
+        android:textColor="#020202"
+        android:layout_width="wrap_content"
+        android:text="当前电量还能维持十分钟,是否结束直播?"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/ll_ll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/dialogtextcolor" />
+
+    <LinearLayout
+        android:id="@+id/ll_ll"
+        android:layout_below="@id/tv_stop_livetitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_live_live_stop_close"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="结束直播"
+            android:textColor="#020202"
+            android:textSize="18sp"
+            android:layout_height="50dp" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/dialogtextcolor"
+            />
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_live_stop_not_du"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#020202"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="暂不处理"
+            android:textSize="18sp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

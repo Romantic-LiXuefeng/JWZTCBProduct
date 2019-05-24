@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/swWizard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff=" "
+                android:textOn=" "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"/>
+
+            <TextView
+                android:id="@+id/tvWizard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/closeWizard"
+                android:textColor="@color/white"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/swAutoRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"/>
+
+            <TextView
+                android:id="@+id/tvAutoRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/closeAutoRepeatPlay"
+                android:textColor="@color/white"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <CheckBox
+                android:id="@+id/ckNewApi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/enableNewNetApi"/>
+
+            <com.rd.lib.ui.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ckNewApi"
+                android:layout_toRightOf="@+id/ckNewApi"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/newApiText"
+                android:textSize="@dimen/text_size_10"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/customApi"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/layout_stroke"
+            android:gravity="center"
+            android:hint="@string/hintNewCustomApi"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <CheckBox
+                android:id="@+id/soundTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/music"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <CheckBox
+                android:id="@+id/enableLocalMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/local_music"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rgVoiceTrack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/VoiceTrack"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbVoiceTrak1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="@string/voiceTrak1"/>
+
+                <RadioButton
+                    android:id="@+id/rbVoiceTrak2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="@string/voiceTrak2"/>
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/VoiceTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/audio"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rgFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbFilter1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/filter1"/>
+
+                <RadioButton
+                    android:id="@+id/rbFilter2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/filter2"/>
+
+                <RadioButton
+                    android:id="@+id/rbFilter3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/filter3"/>
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/filter"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/mv"
+                style="@style/checkboxStyle"
+                android:text="MV"/>
+
+            <CheckBox
+                android:id="@+id/specialEffects"
+                style="@style/checkboxStyle"
+                android:text="@string/special"/>
+
+            <CheckBox
+                android:id="@+id/titling"
+                style="@style/checkboxStyle"
+                android:text="@string/subtitle"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/clipEditing"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/videoSpeedControl"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_trim"/>
+
+                    <CheckBox
+                        android:id="@+id/trim"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_text"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/split"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_spilt"/>
+
+                    <CheckBox
+                        android:id="@+id/sort"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_sort"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/copy"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_copy"/>
+
+                    <CheckBox
+                        android:id="@+id/imageDurationControl"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_picture_duration"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <CheckBox
+                        android:id="@+id/edit"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_edit_pic"/>
+
+                    <CheckBox
+                        android:id="@+id/reverse"
+                        style="@style/checkboxStyle"
+                        android:text="@string/preview_reverse"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/text"
+                        style="@style/checkboxStyle"
+                        android:text="@string/blackboard_text"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <RadioGroup
+                        android:id="@+id/rgProportion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/proportion"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="-20dp"
+                        android:background="@drawable/layout_stroke"
+                        android:orientation="horizontal"
+                        android:paddingTop="20dp">
+
+                        <RadioButton
+                            android:id="@+id/rbProportionAuto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/orientation_auto"/>
+
+                        <RadioButton
+                            android:id="@+id/rbProportionSquare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/orientation_1_1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbProportionLandscape"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/_16_9"/>
+                    </RadioGroup>
+
+                    <CheckBox
+                        android:id="@+id/proportion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#000000"
+                        android:text="@string/proportionTitle"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/clipEditing"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="@string/partedit"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/edit_support_type"
+            android:textColor="@color/white"
+            android:textSize="17dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSupportFormat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_stroke"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbSupportVideoOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/format_only_video"/>
+
+            <RadioButton
+                android:id="@+id/rbSupportImageOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/format_only_image"/>
+
+            <RadioButton
+                android:id="@+id/rbSupportDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/format_default"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/exportSetting"
+            android:textColor="@color/white"
+            android:textSize="17dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_stroke"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/limit_export_duration"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"/>
+
+                <EditText
+                    android:id="@+id/etTimeLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/layout_stroke"
+                    android:gravity="center"
+                    android:hint="@string/hint_record_duration_limit"
+                    android:singleLine="true"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/videoTrailer"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/ui_video_trailer"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/watermark"
+                    android:layout_marginTop="-20dp"
+                    android:background="@drawable/layout_stroke"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/compressX"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"/>
+
+                        <EditText
+                            android:id="@+id/etWatermarkXAxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/layout_stroke"
+                            android:gravity="center"
+                            android:hint="@string/hintCompressX"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/compressY"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"/>
+
+                        <EditText
+                            android:id="@+id/etWatermarkYAxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/layout_stroke"
+                            android:gravity="center"
+                            android:hint="@string/hintCompressY"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/compress_scale_x"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"/>
+
+                        <EditText
+                            android:id="@+id/etWatermarkXZoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/layout_stroke"
+                            android:gravity="center"
+                            android:hint="@string/hint_scale"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/compress_scale_y"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"/>
+
+                        <EditText
+                            android:id="@+id/etWatermarkYZoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/layout_stroke"
+                            android:gravity="center"
+                            android:hint="@string/hint_scale"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/watermark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#000000"
+                    android:text="@string/compress_watermark"/>
+
+                <CheckBox
+                    android:id="@+id/textWatermark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@id/watermark"
+                    android:background="#000000"
+                    android:text="@string/textWatermark"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/subTitleSpecialEffectOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="#000000"
+            android:text="@string/subSpecialEffectOuter"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

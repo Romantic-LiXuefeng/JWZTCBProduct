@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#33333b"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/public_titlebar_style"
+        android:splitMotionEvents="false">
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/btnLeft"
+            style="@style/public_title_bar_button"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/edit_back_button"
+            android:gravity="left|center_vertical"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/draftList"
+            android:textColor="#ffffff"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        />
+</LinearLayout>

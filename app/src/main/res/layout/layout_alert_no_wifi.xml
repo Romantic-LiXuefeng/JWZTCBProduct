@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+    
+    <com.jwzt.caibian.view.FontTextView 
+        android:id="@+id/tv"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:padding="22dp"
+        android:text="@string/continues"
+         android:textColor="#020202"
+        android:textSize="14sp"
+        android:background="@drawable/no_wifi_up"
+        />
+     <View 
+         android:id="@+id/view_var"
+             android:layout_width="225dp"
+             android:layout_height="1dp"
+             android:background="#808080"
+             android:layout_below="@id/tv"
+            />
+    <LinearLayout 
+        android:layout_below="@id/view_var"
+         android:layout_width="225dp"
+         android:layout_height="wrap_content"
+         android:background="@drawable/no_wifi_down"
+        >
+       
+        <com.jwzt.caibian.view.FontTextView 
+           android:id="@+id/new_only_one"
+           android:layout_width="0dp"
+           android:layout_height="43dp"
+           android:layout_weight="1"
+           android:text="允许本次"
+           android:textColor="#020202"
+           android:gravity="center"
+           
+            />
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#808080"
+            />
+        <com.jwzt.caibian.view.FontTextView 
+           android:id="@+id/new_not_do"
+           android:layout_width="0dp"
+           android:layout_height="43dp"
+           android:layout_weight="1"
+           android:text="结束直播"
+           android:textColor="#020202"
+           android:gravity="center"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

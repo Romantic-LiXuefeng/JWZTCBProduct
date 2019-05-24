@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/press_selector" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:src="@drawable/replace" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/iv"
+        android:text="新闻发布会.jpg"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+ 
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_size"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="6dp"
+        android:text="3.6Mb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv"
+        android:layout_marginLeft="10dp"
+        android:textColor="#b4b4b4"
+        android:paddingBottom="16dp"
+        android:textSize="15sp" />
+    <ImageView 
+        android:id="@+id/iv_play"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/circle_starts"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="36dp"
+        />
+
+</RelativeLayout>

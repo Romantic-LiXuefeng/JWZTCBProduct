@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_message"
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:background="@drawable/check_message_corner_bg"
+        android:gravity="center"
+        android:text="审核意见"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="225dp"
+        android:layout_height="260dp"
+        android:layout_below="@id/tv_message"
+        android:background="@drawable/check_message_corner_bg_bottom" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_person"
+            style="@style/check_alert"
+            android:layout_marginTop="15dp"
+            android:text="审核人：警局宣传科" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_time"
+            style="@style/check_alert"
+            android:layout_below="@id/tv_person"
+            android:layout_marginTop="10dp"
+            android:text="审核日期：2015/5/16 13:00" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_content"
+            style="@style/check_alert"
+            android:layout_below="@id/tv_time"
+            android:layout_marginTop="10dp"
+            android:text="审核意见：一位国家部委的项目处长被人举报受贿千万，当最高人民检察院反贪总局侦查处处长侯亮平前来搜查时，看到的却是一位长相憨厚、衣着朴素的“老农民”在简陋破败的旧房里吃炸酱面。" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp" 
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/red_cancel"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

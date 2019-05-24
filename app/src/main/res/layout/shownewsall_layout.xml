@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/headlayout3"  />
+
+    <com.jwzt.caibian.view.PullableScrollView
+        android:id="@+id/qsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_newsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="19sp"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp" >
+
+             
+                <TextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_source"
+                    android:textColor="#cccccc"
+                    android:text="4小时前" />
+
+           
+              
+
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:id="@+id/dianzanline"
+                    android:background="@drawable/newsbutton_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/scchenggong" />
+
+                    <TextView
+                        android:id="@+id/tv_zanNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="审核通过" />
+                </LinearLayout>
+
+                <View 
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"/>
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/newsbutton_bg"
+                    android:id="@+id/pinglinline"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/scshibai" />
+
+                    <TextView
+                        android:id="@+id/tv_jubao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="审核驳回" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_zanwu"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/head"
+                android:alwaysDrawnWithCache="true"
+                android:background="@android:color/white"
+                android:drawingCacheQuality="low"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/nocommunity" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/zanwuInfo"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_centerHorizontal="true"
+                    android:text="暂无评论，快来抢沙发哟~~" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.jwzt.caibian.view.PullableScrollView>
+
+   
+      
+
+   
+
+
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_outside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/date_pick_corner_down"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@id/tv_confirm"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/date_pick_corner_up"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="10dp" >
+
+        <com.jwzt.caibian.view.WheelView
+            android:id="@+id/year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年"
+            android:textColor="@color/a5" />
+
+        <com.jwzt.caibian.view.WheelView
+            android:id="@+id/month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="月"
+            android:textColor="@color/a5" />
+
+        <com.jwzt.caibian.view.WheelView
+            android:id="@+id/day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日"
+            android:textColor="@color/a5" />
+
+        <com.jwzt.caibian.view.WheelView
+            android:id="@+id/hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时"
+            android:textColor="@color/a5" />
+
+        <com.jwzt.caibian.view.WheelView
+            android:id="@+id/minute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分"
+            android:textColor="@color/a5" />
+    </LinearLayout>
+
+</RelativeLayout>

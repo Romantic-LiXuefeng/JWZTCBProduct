@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+      <include 
+          android:id="@+id/in_title"
+          layout="@layout/my_head_layout"/>
+	<GridView 
+	    android:id="@+id/gv"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@id/in_title"
+	     android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:listSelector="@android:color/white"
+	     android:numColumns="4"
+	     android:background="@android:color/white"
+	    />
+	<RelativeLayout 
+	    android:layout_below="@id/gv"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#e8f0ee"
+	    >
+	    <com.jwzt.caibian.view.FontTextView 
+	        android:id="@+id/tv_hot"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginLeft="15dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="#热门标签#"
+	    android:textColor="@color/grey3"
+	    android:textSize="16sp"
+	    />
+	    <com.jwzt.caibian.widget.FlowPopulateLayout
+	         android:id="@+id/fpl"
+	         android:layout_below="@id/tv_hot"
+	         android:layout_width="match_parent"
+	    	 android:layout_height="wrap_content"
+	    
+	        />
+	    
+	</RelativeLayout>
+	
+	
+</RelativeLayout>

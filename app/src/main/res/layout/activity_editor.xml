@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1b1b1b"
+        android:orientation="vertical">
+
+        <!--头部-->
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/zimucanncel"
+                android:padding="5dp"
+                android:onClick="onClickBack" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="编辑字幕"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/zimuconfirm"
+                android:padding="5dp"
+                android:onClick="onSaveEdit" />
+        </LinearLayout>
+
+        <com.jwzt.caibian.view.SquareRelativeLayout
+            android:id="@+id/preview_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_layout"
+            android:background="#000000">
+
+            <com.jwzt.caibian.view.SquareGLSurfaceView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="270dp" />
+
+            <ImageButton
+                android:id="@+id/pause_playback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/preview"
+                android:layout_alignEnd="@id/preview"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#0000"
+                android:onClick="onClickTogglePlayback"
+                android:src="@mipmap/btn_pause" />
+
+
+
+            <!--播放速度-->
+            <LinearLayout
+                android:id="@+id/speed_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/preview"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/speed_panel"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/super_slow_speed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onSpeedClicked"
+                    android:padding="7dp"
+                    android:text="@string/speed_super_slow"
+                    android:textColor="@color/speedTextNormal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/slow_speed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onSpeedClicked"
+                    android:padding="7dp"
+                    android:text="@string/speed_slow"
+                    android:textColor="@color/speedTextNormal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/normal_speed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onSpeedClicked"
+                    android:padding="7dp"
+                    android:text="@string/speed_normal"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/fast_speed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onSpeedClicked"
+                    android:padding="7dp"
+                    android:text="@string/speed_fast"
+                    android:textColor="@color/speedTextNormal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/super_fast_speed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onSpeedClicked"
+                    android:padding="7dp"
+                    android:text="@string/speed_super_fast"
+                    android:textColor="@color/speedTextNormal"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </com.jwzt.caibian.view.SquareRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="样式"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/zimustyle"/>
+
+        <com.jwzt.caibian.view.FrameListViewEdit
+            android:id="@+id/frame_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        </com.jwzt.caibian.view.FrameListViewEdit>
+
+        <com.jwzt.caibian.view.TextSelectorPanel
+            android:id="@+id/text_selector_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.jwzt.caibian.view.PaintSelectorPanel
+            android:id="@+id/paint_selector_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </com.jwzt.caibian.view.PaintSelectorPanel>
+
+        <LinearLayout
+            android:id="@+id/editing_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--滤镜 等-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/filters_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_text_view"
+                    android:clickable="true"
+                    android:onClick="onClickShowFilters"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="滤镜"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mvs_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_text_view"
+                    android:clickable="true"
+                    android:onClick="onClickShowMVs"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="MV"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/paint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_text_view"
+                    android:clickable="true"
+                    android:onClick="onClickShowPaint"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="涂鸦"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_text_view"
+                    android:clickable="true"
+                    android:onClick="onClickShowImages"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="贴图"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/speed_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_text_view"
+                    android:clickable="true"
+                    android:onClick="onClickShowSpeed"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="变速"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <com.jwzt.caibian.view.ImageSelectorPanel
+                android:id="@+id/image_selector_panel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:background="@android:color/background_dark">
+
+            </com.jwzt.caibian.view.ImageSelectorPanel>
+
+
+            <!--小功能  字幕 旋转等-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+
+                <ImageButton
+                    android:id="@+id/text_select_up"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1b1b1b"
+                    android:onClick="onClickTextSelectUp"
+                    android:src="@mipmap/btn_up_text" />
+
+                <ImageButton
+                    android:id="@+id/text_select_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1b1b1b"
+                    android:onClick="onClickTextSelect"
+                    android:src="@mipmap/btn_add_text" />
+
+                <ImageButton
+                    android:id="@+id/text_select_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1b1b1b"
+                    android:onClick="onClickTextSelectNext"
+                    android:src="@mipmap/btn_next_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--字幕弹出窗-->
+    <RelativeLayout
+        android:id="@+id/rl_zimucontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="80dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_zimu"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/video_zimubg">
+
+            <com.jwzt.caibian.view.StrokedTextView
+                android:id="@+id/et_zimu"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:background="@null"
+                android:textColor="@color/white"
+                android:hint="请输入字幕内容"
+                android:gravity="top"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#111111"
+            android:layout_below="@+id/rl_zimu">
+
+            <TextView
+                android:id="@+id/tv_zimucanncel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="#878787"
+                android:onClick="zimuCanncel"
+                android:text="取消"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#5e5e5e"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_zimuconfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:text="确定"
+                android:onClick="zimuConfirm"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

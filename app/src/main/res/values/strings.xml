@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">移动采编3.0</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="newscenter">新闻媒体中心</string>
+    <string name="all">全部稿件</string>
+    <string name="sent">已发稿件</string>
+    <string name="caiji">采集素材</string>
+    <string name="interview">采访任务</string>
+    <string name="text">今年以来，成都市大力开展村（社区）证明事项清理规范工作，共梳理出313项证明事项，依法取消了298项不合法、不合理以及为规避部门责任而要求群众提供的证明材料。除了婚育证明、经济困难证明、亲属证明等15个必要事项外，95%以上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证上的证明都被取消。</string>
+    <string name="please_input">请输入</string>
+    <string name="please_select">请选择</string>
+    <string name="secret">保密</string>
+    <string name="msg_maxi_capacity">已达到照片选择上限</string>
+    <string name="photos_num">%1$d张</string>
+    <string name="commit">确定</string>
+    <string name="commit_num">确定(%1$d/%2$d)</string>
+    <string name="commit_selectnum">确定(%1$d)</string>
+    <string name="msg_no_camera">没找到摄像头</string>
+    <string name="unlogin_tip">您确认要退出登录吗？</string>
+    <string name="exit_tip">您确认要退出吗？</string>
+    <string name="noNetWork">发生网络错误,请联网后重试</string>
+    <string name="numAndLettter">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="crop__done">确认</string>
+    <string name="crop__cancel">取消</string>
+    <string name="crop__wait">请稍等</string>
+    <string name="crop__saving">保存中</string>
+    <string name="picker_title">%1$s年%2$s月%3$s日 %4$s:00</string>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours"></string>
+    <string name="pickerview_minutes"></string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="all_images">全部图片</string>
+    <string name="in_process">视频处理中...</string>
+    <!-- 星座 -->
+    <string-array name="zodiacs">
+        <item>水瓶座</item>
+        <item>双鱼座</item>
+        <item>白羊座</item>
+        <item>金牛座</item>
+        <item>双子座</item>
+        <item>巨蟹座</item>
+        <item>狮子座</item>
+        <item>处女座</item>
+        <item>天秤座</item>
+        <item>天蝎座</item>
+        <item>射手座</item>
+        <item>摩羯座</item>
+    </string-array>
+    <!-- 教育水平 -->
+    <string-array name="education">
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中</item>
+        <item>大专</item>
+        <item>本科</item>
+        <item>研究生及以上</item>
+    </string-array>
+    <!-- 个人职业 -->
+    <string-array name="profession">
+        <item>学生</item>
+        <item>军人</item>
+        <item>政府机构</item>
+        <item>事业单位</item>
+        <item>教师</item>
+        <item>IT</item>
+        <item>广告传媒</item>
+        <item>司机</item>
+        <item>科研人员</item>
+    </string-array>
+
+    <!-- 存储文件文件夹 -->
+    <string name="Files">JWZT_PHOTOS</string>
+    <!-- 图像文件夹 -->
+    <string name="Image">Image</string>
+    <!-- 缩略图文件夹 -->
+    <string name="Thumbnail">Thumbnail</string>
+    <!-- 视频文件夹 -->
+    <string name="Video">Video</string>
+    <string name="save">保存</string>
+    <string name="save1">完成</string>
+    <string name="apply">应用</string>
+    <string name="stickers">贴图</string>
+    <string name="fliter">滤镜</string>
+    <string name="crop">裁剪</string>
+    <string name="rotate">旋转</string>
+    <string name="materialcolorpicker__app_name">颜色选择</string>
+    <string name="materialcolorpicker__descLib">颜色选择</string>
+    <string name="materialcolorpicker__errHex">混色</string>
+    <string name="materialcolorpicker__inputColor">颜色:</string>
+    <string name="materialcolorpicker__btnSelectColor">选择</string>
+    <string name="saving_image">保存</string>
+    <string name="input_hint">输入文本</string>
+
+    <string-array name="fliters">
+        <item>原始</item>
+        <item>软化</item>
+        <item>黑色</item>
+        <item>经典</item>
+        <item>gorgeous</item>
+        <item>retro</item>
+        <item>grace</item>
+        <item>电影</item>
+        <item>记忆</item>
+        <item>yogurt</item>
+        <item>年轮</item>
+        <item>阳光</item>
+    </string-array>
+
+    <string name="no_choose">please choose a image for edit</string>
+    <string name="choose_image">choose a image for edit</string>
+    <string name="edit_image">编辑图片</string>
+    <string name="save_path">保存路径 : %s</string>
+    <string name="take_photo">拍照</string>
+
+    <!-- 视频通讯相关文字描述在此开始 -->
+    <string name="no_network_error">当前网络不可用，请检查网络设置。</string>
+    <string name="user_or_password_error">用户名或密码错误！</string>
+    <string name="loginInfoNull">请输入用户名及密码。</string>
+    <string name="warningIPNull">请设置IP和站点名</string>
+    <string name="login_time_out_error">登录超时，请检查服务器ip和端口号</string>
+    <string name="logining">正在登录...</string>
+    <string name="speaker">音量</string>
+    <string name="push_to_talk_text">按住说</string>
+    <string name="duplex">全双工</string>
+    <string name="halfDuplex">半双工</string>
+    <string name="fullDuplex">全双工</string>
+    <string name="commander_not_online">指挥端不在线</string>
+    <string name="calling">正在连线</string>
+    <string name="CallerMethod">呼叫方式</string>
+    <string name="video_call">视频呼叫</string>
+    <string name="Response_Accept">接受邀请</string>
+    <string name="Response_Reject">拒绝邀请</string>
+    <string name="NoResponse">无应答</string>
+    <string name="NoAvailable">不在线</string>
+    <string name="busy">正在通话</string>
+    <string name="callfrom">呼叫来自于</string>
+    <string name="ManagerWebFailure">登录管理网站失败</string>
+    <string name="Response_Busy">用户忙碌</string>
+    <string name="incall_notif_active">音频呼叫</string>
+    <string name="incall_notif_paused">呼叫停止</string>
+    <string name="incall_notif_video">视频呼叫</string>
+    <string name="notification_started">开始</string>
+    <string name="notification_registered">注册 %s </string>
+    <string name="notification_register_failure">注册失败 %s</string>
+
+    <bool name="enable_call_notification">true</bool>
+    <bool name="forbid_self_call">false</bool>
+
+    <string name="pref_video_initiate_call_with_video_key">pref_video_initiate_call_with_video_key</string>
+    <string name="error_network_unreachable">Network is unreachable</string>
+    <string name="tunnel_mode_entry_value_always">always</string>
+    <string name="tunnel_mode_entry_value_3G_only">3G_only</string>
+    <string name="tunnel_mode_entry_value_auto">auto</string>
+
+    <bool name="disable_every_log">false</bool>
+    <bool name="enable_push_id">true</bool>
+    <bool name="disable_chat">false</bool>
+    <bool name="auto_answer_calls">false</bool>
+    <bool name="allow_ringing_while_early_media">true</bool>
+
+    <string name="unknown_incoming_call_name">Unknown</string>
+    <string name="pref_transport_tls">TLS</string>
+    <string name="pref_transport_udp">UDP</string>
+    <string name="pref_transport_tcp">TCP</string>
+    <string name="pref_transport_key">pref_transport_key</string>
+    <string name="pref_transport_udp_key">pref_transport_udp_key</string>
+    <string name="pref_transport_tcp_key">pref_transport_tcp_key</string>
+    <string name="pref_transport_tls_key">pref_transport_tls_key</string>
+    <string name="pref_video_use_front_camera_key">pref_video_use_front_camera_key</string>
+    <string name="pref_video_codec_h263_key">pref_video_codec_h263_key</string>
+    <string name="pref_video_codec_mpeg4_key">pref_video_codec_mpeg4_key</string>
+    <string name="pref_video_codec_h264_key">pref_video_codec_h264_key</string>
+    <string name="pref_wifi_only_key">pref_wifi_only_key</string>
+    <string name="pref_transport_use_random_ports_key">pref_transport_use_random_ports_key</string>
+    <string name="pref_push_notification_key">pref_push_notification_key</string>
+    <string name="push_reg_id_key">push_reg_id_key</string>
+    <string name="push_sender_id_key">push_sender_id_key</string>
+    <string name="pref_debug_key">pref_debug_key</string>
+    <string name="pref_background_mode_key">pref_background_mode_key</string>
+    <string name="pref_animation_enable_key">pref_animation_enable_key</string>
+    <string name="pref_autostart_key">pref_autostart_key</string>
+    <string name="pref_auto_accept_friends_key">pref_auto_accept_friends_key</string>
+    <string name="pref_image_sharing_server_key">pref_image_sharing_server_key</string>
+    <string name="pref_remote_provisioning_key">pref_remote_provisioning_key</string>
+    <string name="profile_video_size">Video Size</string>
+    <string name="pref_disable_account_key">pref_disable_account_key</string>
+    <string name="pref_extra_accounts">pref_nb_accounts_extra</string>
+    <string name="pref_default_account_key">pref_default_account</string>
+    <string name="pref_prefix_key">pref_prefix_key</string>
+    <string name="pref_proxy_key">pref_proxy_key</string>
+    <string name="pref_domain_key">pref_domain_key</string>
+    <string name="pref_passwd_key">pref_passwd_key</string>
+    <string name="pref_username_key">pref_username_key</string>
+    <string name="pref_auth_userid_key">pref_auth_userid_key</string>
+    <string name="pref_wizard_key">pref_wizard_key</string>
+    <string name="pref_activated_key">pref_activated_key</string>
+    <string name="pref_expire_key">pref_expire_key</string>
+    <string name="pref_enable_outbound_proxy_key">Outbound proxy</string>
+    <string name="push_sender_id">622464153529</string>
+    <string name="pref_video_codec_vp8_key">pref_video_codec_vp8_key</string>
+    <string name="pref_video_enable_key">pref_video_enable_key</string>
+    <string name="signin">签收</string>
+    <string name="addressbook_label">GoLive</string>
+    <!-- 视频通讯相关文字描述在此结束 -->
+
+    <string name="progress_dialog_loading">加载中...</string>
+    <string name="progress_dialog_saving">保存中...</string>
+    <string name="back">返回</string>
+    <string name="drawPhoto_actionName">图片处理</string>
+    <string name="drawPhoto_draw">涂鸦</string>
+    <string name="drawPhoto_actioning">处理中..</string>
+    <string name="publishsell_publish">发布</string>
+    <string name="layout_draw_retake">撤销</string>
+    <string name="layout_draw_photo">涂马赛克</string>
+    <string name="layout_draw_finish">保存</string>
+
+    <!-- 4G回传相关 -->
+    <string name="title_section1">主题</string>
+    <string name="title_section2">主题2</string>
+    <string name="title_section3">主题3</string>
+    <string name="storage_is_full">储存卡已满</string>
+    <string name="max_length_reached">已到达录制最大限制</string>
+    <string name="audio_db_artist_name">精视</string>
+    <string name="audio_db_album_name">采访录音</string>
+    <string name="audio_db_playlist_name">我的采访录音列表</string>
+    <string name="error_mediadb_new_record">不能保存录音</string>
+    <string name="accept">完成</string>
+    <string name="discard">放弃</string>
+    <string name="button_ok">确认</string>
+    <string name="cance">取消</string>
+    <string name="longin">登录</string>
+    <string name="longining">登录中</string>
+    <string name="applaguage_chinese">中文</string>
+    <string name="applaguage_english">English</string>
+    <string name="iptips">请输入IP地址</string>
+    <string name="accounttips">请输入用户名</string>
+    <string name="passwordtips">请输入密码</string>
+    <string name="checkip">请输入正确的IP地址</string>
+    <string name="checkaccount">请输入正确的用户名</string>
+    <string name="checkpassword">请输入正确的密码</string>
+    <string name="longintips">用户名或密码不正确</string>
+    <string name="menucapturelive">直播</string>
+    <string name="menureport">报导</string>
+    <string name="menucamera">摄像</string>
+    <string name="menusoundrecord">录音</string>
+    <string name="menumediadb">媒体库</string>
+    <string name="menuset">设置</string>
+    <string name="settingmedia">多媒体设置</string>
+    <string name="settingmetadata">METADATA</string>
+    <string name="settinggroup">分组信息</string>
+    <string name="settinggesture">手势密码</string>
+    <string name="settinghelp">帮助</string>
+    <string name="settingabout">关于</string>
+    <string name="settingquit">退出</string>
+    <string name="settingdefault">默认</string>
+    <string name="settings">设置</string>
+    <string name="addreport">加入报导</string>
+    <string name="setup_gesture_code">设置手势密码</string>
+    <string name="setup_gesture_pattern">绘制解锁图案</string>
+    <string name="setup_gesture_pattern_again">再次绘制解锁图案</string>
+    <string name="forget_gesture_code">忘记手势密码?</string>
+    <string name="use_other_account_login">用其他账号登录</string>
+    <string name="set_gesture_pattern">绘制解锁图案</string>
+    <string name="set_gesture_pattern_reason">设置手势密码，防止他人未经授权查看</string>
+    <string name="reset_gesture_code">重新设置手势密码</string>
+    <string name="livetime">%1$02d:%2$02d:%3$02d</string>
+    <!-- MediaSettings -->
+    <string name="settings_media_resolution">录像分辨率</string>
+    <string name="settings_mediarecord_framerate">录像帧率</string>
+    <string name="settings_live_maxrate">直播最高码率</string>
+    <string name="settings_live_delay">延时</string>
+    <string name="settings_live_record">直播中录制</string>
+    <string name="settings_record_flagmentsize">录制文件分割尺寸</string>
+    <string name="settings_recordrate">摄像录制码率</string>
+    <string name="settings_talkonline">通话</string>
+    <string name="settings_geo">地理位置</string>
+    <string name="permission_tips">请打开相关权限</string>
+    <string name="quit_tips_title">退出提示</string>
+    <string name="quit_tips">退出应用吗？</string>
+    <!-- 直播中的设置 -->
+    <string name="live_status_init">连接服务器中</string>
+    <string name="live_status_ready">准备</string>
+    <string name="live_status_live">直播中</string>
+    <string name="live_status_off">掉线</string>
+    <string name="livesettingsresolution">分辨率</string>
+    <string name="livesettingsframe">帧率</string>
+    <string name="livesettingsmaxrate">最高码率</string>
+    <string name="livesettingsdelay">延时</string>
+    <string name="livesettingsaudiomode">音频模式</string>
+    <string name="livesettingsmvp">mvp模式</string>
+    <string name="livesettingsstandard">标准模式</string>
+    <string name="livebacktip">退出该页面会先停止直播，确认？</string>
+    <string name="stop_tips_title">停止提示</string>
+    <string name="livestoptip">确认退出直播？</string>
+    <!-- 登录错误状态提示 -->
+    <string name="loginstatus_ok">登录成功</string>
+    <string name="loginstatus_clock_adjust_timeout">服务器同步失败</string>
+    <string name="loginstatus_device_id">设备未注册</string>
+    <string name="loginstatus_login_moretimes">不能重复登录</string>
+    <string name="loginstatus_net_unavailable">网络错误</string>
+    <string name="loginstatus_not_logout">注销错误</string>
+    <string name="loginstatus_password">密码错误</string>
+    <string name="loginstatus_sdk_start">启动失败</string>
+    <string name="loginstatus_login_timeout">登录超时</string>
+    <string name="loginstatus_user_unregister">用户未注册</string>
+    <string name="loginstatus_nms_nousb">服务器没有被认证</string>
+    <string name="loginstatus_over_limits">授权客户端已满</string>
+    <string name="loginstatus_time_over">软件体验时间已结束</string>
+    <string name="loginstatus_auth_onlydev">授权只能接入一台设备</string>
+    <string name="loginstatus_not_online_clonedevice">禁止克隆软件登录</string>
+    <!-- 4G回传相关结束 -->
+
+    <string name="album_enter_select">选择</string>
+    <string name="api_cancel">取消</string>
+    <string name="album_photo_select_tip">项</string>
+    <string name="album_phoot_select_all">全选</string>
+    <string name="album_phoot_unselect_all">取消全选</string>
+    <string name="album_title">我的照片</string>
+    <string name="pgcommon_share">分享</string>
+    <string name="common_cut">移动</string>
+    <string name="common_delete">删除</string>
+    <string name="common_edit">编辑</string>
+    <string name="album_message">图片&amp;视频</string>
+    <string name="meeting">此会议是直播会议</string>
+    <string name="checkmeeting_error_3001">服务器过期</string>
+    <string name="checkmeeting_error_3002">公司被冻结</string>
+    <string name="checkmeeting_error_3003">会议被删除或过期</string>
+    <string name="checkmeeting_error_4007">会议不存在</string>
+    <string name="checkmeeting_error_4008">会议密码错误</string>
+    <string name="checkmeeting_error_4110">该会议需要密码，请输入密码</string>
+    <string name="checkmeeting_error_5001">直播被删除或过期</string>
+    <string name="checkmeeting_error_5002">直播不存在</string>
+    <string name="checkmeeting_error_5003">直播密码错误</string>
+    <string name="checkmeeting_error_5004">该直播需要密码，请输入密码</string>
+    <string name="checkmeeting_error_4109">Auth不正确</string>
+    <string name="checkmeeting_error_4103">会议人数超限</string>
+    <string name="WaitingForNetwork">您的网络暂时不可用,请稍后重试</string>
+    <string name="weiyi_video_out_slow">视频发送速度慢</string>
+    <string name="weiyi_video_out_disconnect">视频发送连接断开重连</string>
+    <string name="weiyi_video_in_slow">视频接收速度慢</string>
+    <string name="weiyi_video_in_disconnect">视频接收连接断开重连</string>
+    <string name="weiyi_audio_disconnect">音频连接断开重连</string>
+    <string name="weiyi_audio_pernission">无法开启麦克风</string>
+    <string name="weiyi_other">未知警告</string>
+    <string name="crash_dialog_message">The app found information about previous crashes. Would you like to send this data to the developer?</string>
+    <string name="crash_dialog_negative_button">Dismiss</string>
+    <string name="crash_dialog_positive_button">Send</string>
+    <string name="crash_dialog_title">Crash Data</string>
+    <string name="main_front">前置</string>
+    <string name="main_hq">高质量</string>
+    <string name="main_pause">暂停</string>
+    <string name="main_speaker">外放</string>
+    <string name="main_enter_meeting">进入会议</string>
+    <string name="main_leave_meeting">离开会议</string>
+    <string name="main_send_video">查看自己视频</string>
+    <string name="main_unsend_video">停止自己视频</string>
+    <string name="main_watch_video">查看别人视频</string>
+    <string name="main_unwatch_video">关闭别人视频</string>
+    <string name="main_free_speaker">自由发言</string>
+    <string name="main_unfree_speaker">取消自由发言</string>
+    <string name="main_member_list">参会列表</string>
+    <string name="main_message_text">消息</string>
+    <string name="continues">当前设备环境无WIFI，是否继续本次直播？</string>
+
+    <!-- 网络状态的相关提示 -->
+    <string name="netoff">网络已断开</string>
+    <string name="wifiOFF_FlowON">已切换到移动网络</string>
+    <string name="wifiON">已切换到WIFI网络</string>
+    <string name="网络已切换到数据流量"></string>
+    <string name="please_check_net">请检查网络</string>
+
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <!-- 关于上拉加载，下拉刷新的相关文字 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!-- 录音相关模块文字描述开始 -->
+    <string name="up_for_cancel">手指上滑，取消发送</string>
+    <string name="want_to_cancle">松开手指，取消发送</string>
+    <string name="time_too_short">录音时间过短</string>
+    <string name="long_click_record">长按 录音</string>
+    <string name="hang_up_finsh">松开 结束</string>
+    <string name="release_cancel">松开 取消</string>
+    <!-- 录音相关模块文字描述结束 -->
+
+
+    <string name="toast_draft_recover_fail">草稿恢复失败</string>
+    <string name="toast_draft_recover_success">草稿恢复成功</string>
+
+    <string name="if_edit_video">是否编辑视频</string>
+    <string name="dlg_yes">是</string>
+    <string name="dlg_no">否</string>
+
+    <string name="transition_maker_edit">编辑"</string>
+    <string name="transition_maker_confirm">确定"</string>
+    <string name="divide_delete_tip">双击片段可以取消"</string>
+    <string name="divide_add_tip">剪一段"</string>
+    <string name="divide_add_video">添加视频"</string>
+    <string name="divide_long_press_tip">长按缩略图排序"</string>
+    <string name="title_video_divide">视频编辑</string>
+
+    <string name="no_camera_permission">没有权限使用摄像头，请开启摄像头权限</string>
+    <string name="no_record_audio_permission">没有权限使用录音，请开启录音权限</string>
+    <string name="no_read_phone_state_permission">没有读取用户数据的权限，请开启该权限</string>
+    <string name="no_write_external_storage_permission">没有文件写权限，请开启该权限</string>
+    <string name="no_read_external_storage_permission">没有文件读权限，请开启该权限</string>
+    <string name="no_system_alert_window_permission">没有弹窗权限，请开启该权限</string>
+    <string name="no_location_permission">没有定位权限，请开启该权限</string>
+    <string name="yunmusic_sign">授权证书</string>
+
+    <string name="speed_super_slow">极慢"</string>
+    <string name="speed_slow">慢"</string>
+    <string name="speed_normal">正常"</string>
+    <string name="speed_fast">快"</string>
+    <string name="speed_super_fast">极快"</string>
+
+    <string name="desc_duration">持续时间</string>
+    <string name="desc_transition_time">转场时间</string>
+    <string name="desc_second">秒</string>
+    <string name="desc_ms">ms</string>
+    <string name="desc_paint_color">画笔颜色</string>
+    <string name="desc_paint_size">画笔大小</string>
+    <string name="desc_paint_undo">撤销</string>
+    <string name="desc_paint_clear">清除</string>
+    <string name="desc_image_tip">请选择所需的贴图！</string>
+    <string name="desc_compose_display_tip">展现方式：</string>
+    <string name="desc_compose_display_full">全屏</string>
+    <string name="desc_compose_display_fit">自适应</string>
+
+    <item name="selector_view" type="id"></item>
+    <item name="selector_viewedit" type="id"></item>
+    <item name="rect_view" type="id"></item>
+    <item name="rect_viewedit" type="id"></item>
+    <!--锐动-->
+
+    <string name="main_title">Android视频编辑SDK-Demo</string>
+    <string name="video_isAntiChang">该视频是防篡改视频</string>
+    <string name="osd_title">"水印内容：</string>
+    <string name="osd_hint">"请输入水印内容</string>
+    <string name="osd_content">"×××营业厅 ×××业务员 \n业务员编号:0001  \n业务名称:xxxx  \n客户身份证号：500233yyyymmddxxxx</string>
+    <string name="recordOtakephoto">录制/拍照</string>
+    <string name="btnSetting">设置</string>
+    <string name="squareType">(1)正方形方式</string>
+    <string name="fullScreenType">(2)全屏方式</string>
+    <string name="changeRecordType">(3)正方形、全屏（自由切换）</string>
+    <string name="videoEdit">视频编辑</string>
+    <string name="directEdit">(1)无相册选择，进入编辑</string>
+    <string name="galleryMediaEdit">(2)从相册选择后进入编辑</string>
+    <string name="draftEdit">(3)草稿箱</string>
+    <string name="shortVideo">短视频(由视频编辑配置而成)</string>
+    <string name="short15">(1)15秒短视频</string>
+    <string name="imageVideoDemo">照片电影示例</string>
+    <string name="apiQuik">(1)API实现(仿Quik)</string>
+    <string name="aeVideo">(2)AE模板</string>
+    <string name="creativeFunnyVideo">创意搞怪小视频</string>
+    <string name="crFunnyApiDemo">(1)API实现</string>
+    <string name="crFunnyAEDemo">(2)AE模板 (简影)</string>
+    <string name="irregularRectDemo">不规则四边形示例</string>
+    <string name="irregularVPDemo">不规则四边形（视频+图片）</string>
+    <string name="photoRectAnim">照片电影(矩形动画)</string>
+    <string name="maskDemo">异形示例(mask)</string>
+    <string name="audioEffectDemo">音效示例</string>
+    <string name="videoTrim">视频截取</string>
+    <string name="horizontalVideo">(1)横屏视频</string>
+    <string name="verticalVideo">(2)竖屏视频</string>
+    <string name="squareVideo">(3)正方形视频</string>
+    <string name="galleryVideo">(4)相册视频</string>
+    <string name="imageAndVideo">(1)视频+图片</string>
+    <string name="onlyVideo">(2)仅视频</string>
+    <string name="onlyImage">(3)仅图片</string>
+    <string name="compressionText">视频压缩</string>
+    <string name="compressionVideo">视频压缩</string>
+    <string name="antiChangeRecord">防篡改录制</string>
+    <string name="antiFullRecord">全屏录制</string>
+    <string name="otherMenu">其它</string>
+    <string name="player">播 放 器</string>
+    <string name="imageDeformation">图 片 变 形</string>
+    <string name="exportDemo">导出(支持片尾、水印)</string>
+    <string name="resetAllConfig">重置设置</string>
+
+    <!--草稿箱界面-->
+    <string name="noDraftList">没有草稿视频</string>
+    <string name="exporting">正在导出...</string>
+    <string name="exportFailed">导出失败</string>
+    <string name="duration_text">时长: %.1f 秒</string>
+    <string name="somethingNotExits">部分资源不存在</string>
+    <string name="draft_dialog_title">是否删除此视频？</string>
+    <string name="draft_dialog_pos">删除</string>
+    <string name="draft_dialog_neg">取消</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_failed">删除失败</string>
+
+
+    <!-- Dialog.config-->
+
+    <string name="openWizard">开启向导模式</string>
+    <string name="closeWizard">关闭向导模式</string>
+    <string name="openAutoRepeatPlay">开启自动重播</string>
+    <string name="closeAutoRepeatPlay">关闭自动重播</string>
+
+    <string name="audioToastMsg">方式二配音只能在配乐开启的情况下有效</string>
+    <string name="trailerAuthor">秀友</string>
+
+
+    <!---截取Diloag-->
+
+    <string name="trimRebackType">请选择截取后返回类型</string>
+    <string name="trimVideo">截取视频</string>
+    <string name="trimTimeRange">截取时间</string>
+    <string name="draftList">草稿箱</string>
+    <string name="enableTakePhotoBtn">显示拍摄按钮</string>
+    <string name="galleryMediaMax">限制相册选择个数：</string>
+    <string name="hint0NotLimited">默认0,不限制</string>
+
+    <!-- audio-->
+    <string name="audioEffectSetting">音频设置</string>
+    <string name="audioChannel">音频声道数：</string>
+    <string name="audioHint">不设置为默认值</string>
+    <string name="audioSampleRate">音频采样率：</string>
+    <string name="audioBitRate">音频码率：</string>
+
+
+    <!--camera_config-->
+    <string name="uiDirection">UI方向设置</string>
+    <string name="lockVertical">锁定竖屏</string>
+    <string name="lockHorizontal">锁定横屏</string>
+    <string name="autoSensor">自动切换</string>
+    <string name="recordWithMusic">录制中播放音乐</string>
+    <string name="recordDurationMin">拍摄最小时长：</string>
+    <string name="recordDurationMax">拍摄最大时长：</string>
+    <string name="hint_record_duration_limit">默认0为不限制，单位秒</string>
+    <string name="video">视频</string>
+    <string name="hint_record_mv_max_limit">默认为15秒，单位秒</string>
+    <string name="record_short_mv">短视频MV</string>
+    <string name="record_image">照片</string>
+    <string name="recordSupportMode">拍摄支持类型</string>
+    <string name="cameraConfig">摄像头设置：</string>
+    <string name="cameraFront">前置</string>
+    <string name="cameraRear">后置</string>
+    <string name="camera_takephoto_mode_config">拍照模式设置</string>
+    <string name="takePhotoSingle">单次</string>
+    <string name="takePhotoMore">多次</string>
+    <string name="takePhotoSingleIsSave">写入相册</string>
+    <string name="isShowGalleryBtn">显示相册按钮</string>
+    <string name="isEnableCustomGallery">使用自定义相册</string>
+    <string name="isEnableFaceu">人脸道具贴纸(android4.3及以上支持)：</string>
+    <string name="open">开启</string>
+    <string name="close">关闭</string>
+    <string name="record_osd_end_duration">水印片尾时长：</string>
+    <string name="hint_record_osd_end">范围(0-1.0f),单位秒</string>
+    <string name="cameraOSD">相机水印</string>
+    <string name="enableAntiChange">启用防篡改录制</string>
+    <string name="enableBeautify">启用美颜</string>
+    <string name="enableFrontMirror">启用前置输出镜像(4.3以上有效)</string>
+
+
+    <!-- compress-->
+    <string name="enableHWAcc">使用硬件加速</string>
+    <string name="compressX">x轴：</string>
+    <string name="hintCompressX">范围0-1.0</string>
+    <string name="compressY">y轴：</string>
+    <string name="hintCompressY">范围0-1.0</string>
+    <string name="compress_scale_x">x轴缩放比例：</string>
+    <string name="hint_scale">默认为1</string>
+    <string name="compress_scale_y">y轴缩放比例：</string>
+    <string name="compress_watermark">视频水印</string>
+    <string name="compressBitRate">码率：</string>
+    <string name="hintCompressBitRate">默认为4M,单位M</string>
+    <string name="compress_width">视频宽度：</string>
+    <string name="hint_compress_width">默认为原始宽高</string>
+    <string name="compress_height">视频高度：</string>
+    <string name="hint_compress_height">默认为原始宽高</string>
+    <string name="compress_title">正在压缩视频...</string>
+
+
+    <!-- trim-->
+    <string name="rbTrimReturnMedia">真实截取</string>
+    <string name="rbTrimReturnTime">返回时间段</string>
+    <string name="rbTrimDynamicReturn">动态截取</string>
+    <string name="trimReturnType">截取行为</string>
+    <string name="trimTypeFree">自由截取</string>
+    <string name="trimSingleFixed">单个定长截取</string>
+    <string name="trimTimeText">截取时间：</string>
+    <string name="hintSinglefixedTrimTime">默认为15秒，单位秒</string>
+    <string name="trimDoubleFixed">两个定长截取</string>
+    <string name="timeTime1">截取时间1：</string>
+    <string name="hintTrimTime1">默认为8秒，单位秒</string>
+    <string name="trimTime2">截取时间2：</string>
+    <string name="hintTrimTime2">默认为16秒，单位秒</string>
+    <string name="trimTime">截取时间</string>
+    <string name="trimCropNormal">原始</string>
+    <string name="trimCrop1x1">1比1</string>
+    <string name="trimCropNormalWithItem">默认为原始,可切换</string>
+    <string name="trimCrop1x1WithItem">默认为1比1,可切换</string>
+    <string name="trimCrop">视频裁剪比例</string>
+
+    <!--UI-->
+    <string name="enableNewNetApi">使用自定义素材</string>
+    <string name="newApiText">（资源放到自己的服务器）</string>
+    <string name="hintNewCustomApi">配置自己的资源地址 http://</string>
+    <string name="voiceTrak1">配音一</string>
+    <string name="voiceTrak2">配音二(只能在配乐开启时有效)</string>
+    <string name="voiceTrack">配音</string>
+    <string name="filter1">滤镜一</string>
+    <string name="filter2">滤镜二</string>
+    <string name="filter3">滤镜三</string>
+    <string name="_16_9">16:9</string>
+    <string name="proportionTitle">画面比例</string>
+    <string name="edit_support_type">编辑支持的文件类型：</string>
+    <string name="format_only_video">仅视频</string>
+    <string name="format_only_image">仅图片</string>
+    <string name="format_default">视频+图片</string>
+    <string name="exportSetting">导出设置:</string>
+    <string name="limit_export_duration">限制导出视频时间：</string>
+    <string name="ui_video_trailer">片尾水印</string>
+    <string name="textWatermark">文字水印</string>
+    <string name="subSpecialEffectOuter">字幕、贴纸在MV之外显示</string>
+    <string name="export_asset">导出测试资源</string>
+
+
+</resources>

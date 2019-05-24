@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_message"
+        android:layout_width="490dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="40dp"
+        android:textSize="17sp"
+        android:paddingBottom="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alert_corner_bg"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/unlogin_tip"
+        android:textColor="@color/lighter_black" />
+
+    <LinearLayout
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_message"
+        android:layout_alignRight="@id/tv_message"
+        android:layout_below="@id/tv_message"
+        android:background="@drawable/alert_corner_bg_bottom"
+        android:gravity="center_vertical"
+        
+      
+        >
+
+        <View 
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_confirms"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                  android:layout_weight="13"
+                android:background="@drawable/alert_corner_left_bottom_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/lighter_black" />
+      
+   <View 
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+              android:layout_weight="1"
+            />
+        
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_cancel_unlogin"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                  android:layout_weight="13"
+                android:background="@drawable/alert_corner_right_bottom_bg"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@android:color/white" />
+           <View 
+            android:layout_width="0dp"
+              android:layout_weight="1"
+            android:layout_height="40dp"
+            />
+
+        
+
+           
+    </LinearLayout>
+
+</RelativeLayout>

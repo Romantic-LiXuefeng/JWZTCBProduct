@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.jwzt.caibian.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/replace" />
+
+    <View
+        android:id="@+id/view_shadow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@id/civ"
+        android:layout_alignTop="@id/civ"
+        android:background="@drawable/big_head_selector"
+        android:clickable="true" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civ"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="欧阳娜娜"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/grey3"
+        android:textSize="15sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:text="新闻中心"
+        android:textColor="@color/greybd"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.jwzt.caibian.widget.SwipeMenuLayout
+        android:id="@+id/sml"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:ios="true"
+        app:leftSwipe="false"
+        app:swipeEnable="true"
+        >
+        <com.jwzt.caibian.view.FontTextView 
+            android:id="@+id/tv1" 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="还喝啊我机构按实际"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            />
+         <com.jwzt.caibian.view.FontTextView 
+            android:id="@+id/tv2" 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="删除"
+            android:background="#ff0000"
+            />
+        
+    </com.jwzt.caibian.widget.SwipeMenuLayout>
+
+</RelativeLayout>

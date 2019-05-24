@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fbfbfb"
+    android:layout_height="105dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout 
+        android:id="@+id/sl_image"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/image" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout 
+        android:id="@+id/sl_camera"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera2" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout
+        android:id="@+id/sl_file"
+         style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/file" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout        android:id="@+id/sl_location"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location_grey" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+</LinearLayout>

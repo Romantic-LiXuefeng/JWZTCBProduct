@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/dark_theme_pressed"
+        android:gravity="center"
+        android:text="BVCaster"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+    <com.jwzt.caibian.view.PullToRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/prl_refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbars="none">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.jwzt.caibian.view.PullableScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--头部-->
+                <RelativeLayout
+                    android:id="@+id/rl_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <com.jwzt.caibian.widget.CircleImageView
+                        android:id="@+id/civ"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="45dp" />
+
+                    <View
+                        android:id="@+id/civ_shadow"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/circle_head_selector_pressed"
+                        android:clickable="true" />
+
+                    <com.jwzt.caibian.view.FontTextView
+                        android:id="@+id/tv_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/civ"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/civ"
+                        android:text="@string/newscenter"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <com.jwzt.caibian.view.FontTextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_group"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/civ"
+                        android:text="欧阳娜娜"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_setting"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="60dp"
+                        android:padding="10dp"
+                        android:src="@drawable/setting" />
+
+                    <View
+                        android:id="@+id/view_bar"
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/civ"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="25dp"
+                        android:background="#4dffffff" />
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_bar"
+                        android:layout_marginTop="13dp"
+
+                        android:orientation="horizontal">
+
+                        <com.jwzt.caibian.view.FontTextView
+                            style="@style/textStyle1"
+                            android:text="@string/all" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            style="@style/textStyle1"
+                            android:text="@string/sent" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            style="@style/textStyle1"
+                            android:text="@string/caiji" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            style="@style/textStyle1"
+                            android:text="@string/interview" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_allNum"
+                            style="@style/textStyle2"
+                            android:text="" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_sent"
+                            style="@style/textStyle2"
+                            android:text="" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_caiji"
+                            style="@style/textStyle2"
+                            android:text="" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_inter"
+                            style="@style/textStyle2"
+                            android:text="" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--中部gridview-->
+                <com.jwzt.caibian.widget.MyGridView
+                    android:id="@+id/gv_main_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_head"
+                    android:background="@android:color/white"
+                    android:numColumns="4"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" />
+                <!--底部列表-->
+                <RelativeLayout
+                    android:id="@+id/rl_move"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/gv_main_home">
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#e9efef" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/view2">
+
+                        <com.jwzt.caibian.widget.MyListView
+                            android:id="@+id/mlv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@android:color/white"
+                            android:dividerHeight="0.5dp"
+                            android:listSelector="@android:color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_zanwu"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:background="@color/whitecolor"
+                            android:gravity="center"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/iv_zanwu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/zanwuxiaoxi" />
+
+                            <com.jwzt.caibian.view.FontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_zanwu"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:text="暂无记录"
+                                android:textColor="@color/bg_gray"
+                                android:textSize="17sp"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </com.jwzt.caibian.view.PullableScrollView>
+
+        <include
+            android:id="@+id/loadmore_view"
+            layout="@layout/load_more" />
+    </com.jwzt.caibian.view.PullToRefreshLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/dark_theme_pressed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="首页"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/img_addplus"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:src="@drawable/plus" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

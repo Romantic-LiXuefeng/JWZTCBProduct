@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0" >
+<include 
+    android:id="@+id/in_title"
+    layout="@layout/my_head_layout"/>
+     <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:src="@drawable/plus"
+        android:visibility="gone" />
+    <ImageView 
+        android:id="@+id/iv_empty"
+        android:layout_below="@id/in_title"
+        android:layout_marginTop="130dp"
+        android:layout_width="70dp"
+        android:layout_height="66dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/empty"
+        android:layout_centerHorizontal="true"
+        />
+    <com.jwzt.caibian.view.FontTextView 
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无回传任务"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textColor="#d5d5d5"
+        android:layout_below="@id/iv_empty"
+        android:layout_marginTop="30dp"
+        />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#eff0f0"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/white"
+        android:layout_below="@id/in_title" />
+
+</RelativeLayout>

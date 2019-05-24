@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="45dp"
+    android:paddingRight="45dp"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_white9"
+    android:orientation="vertical" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+       
+        android:background="@drawable/net_net_corner_up"
+        android:gravity="center"
+        android:text="首选网络设置"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_4g"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_check"
+
+        android:text="使用3G/4G网络" />
+
+    <View style="@style/netBarStyle" />
+
+   
+ <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_wifi"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_uncheck"
+        android:text="使用wifi网络" />
+
+    <View style="@style/netBarStyle" />
+   
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_wifi_4g"
+        style="@style/netText"
+        android:drawableRight="@drawable/quality_uncheck"
+        android:background="@drawable/net_net_corner_down_selector"
+        android:text="使用wifi和4G网络" />
+
+</LinearLayout>
+</RelativeLayout>

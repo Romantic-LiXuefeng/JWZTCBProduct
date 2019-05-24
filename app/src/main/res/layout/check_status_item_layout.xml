@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f5f5f5" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="25dp"
+         android:layout_marginLeft="10dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/chuan" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv"
+        
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@id/iv"
+        android:gravity="center_vertical"
+        android:text="稿件上传成功"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/greya" />
+    <com.jwzt.caibian.view.FontTextView 
+        android:id="@+id/tv_time"
+         android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/greybd" 
+         android:layout_marginRight="10dp"
+          android:gravity="center_vertical"
+          android:text="15:48 4/24"
+        />
+
+</RelativeLayout>

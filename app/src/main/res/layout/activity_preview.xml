@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="12dp"
+                android:padding="15dp"
+                android:textColor="@color/grey3"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/tv_title"
+                android:orientation="vertical"
+                android:id="@+id/ll_"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:id="@+id/ll_creater"
+                        >
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="创建："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_creater"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ll_time"
+                        >
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="时间："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_time"
+                            android:layout_marginLeft="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_from"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="来源："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp" />
+
+                        <com.jwzt.caibian.view.FontTextView
+                            android:id="@+id/tv_form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/other1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:visibility="gone"
+                        android:layout_marginLeft="5dp"/>
+                    <View
+                        android:id="@+id/other2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:id="@+id/ll_type"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="类型："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_type"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:visibility="gone"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ll_play"
+                        >
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="播出："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/play_state"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ll_state"
+                        >
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="审核："
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                        <com.jwzt.caibian.view.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_status"
+                            android:layout_marginLeft="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/greyc8"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/other3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="2"
+
+                        android:layout_marginLeft="5dp"/>
+                    <View
+                        android:id="@+id/other4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ll_location"
+                    android:layout_height="wrap_content">
+                    <com.jwzt.caibian.view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/greyc8"
+                        android:textSize="12sp"
+                        android:text="位置:"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/greyc8"
+                        android:textSize="12sp"
+                        android:id="@+id/tv_location"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/ll_"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/greye3" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_image_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_bar"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="13dp"
+                android:singleLine="true"
+                android:text="图片(0)" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_video_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_bar"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/tv_image_num"
+                android:singleLine="true"
+                android:text="视频(0)" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_audio_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_bar"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/tv_video_num"
+                android:singleLine="true"
+                android:text="音频(0)" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/view_bar"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="13dp"
+                android:text="全部 >"
+                android:textColor="@color/grey9" />
+
+            <android.widget.HorizontalScrollView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@id/tv_image_num"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </android.widget.HorizontalScrollView>
+
+            <View
+                android:id="@+id/view_bar2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/rv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/greye3" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_bar2"
+                android:lineSpacingExtra="15dp"
+                android:paddingBottom="50dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="23dp"
+                android:textColor="#818181"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_upload"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/upload_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="上传"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

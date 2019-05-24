@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	根标签为animation-list，其中oneshot代表着是否只展示一遍，设置为false会不停的循环播放动画
+	根标签下，通过item标签对动画中的每一个图片进行声明
+	android:duration 表示展示所用的该图片的时间长度
+ -->
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:oneshot="false"
+  >
+  	<item android:drawable="@drawable/loading_white01" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white02" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white03" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white04" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white05" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white06" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white07" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white08" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white09" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white10" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white11" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white12" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white13" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white14" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white15" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white16" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white17" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white18" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white19" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white20" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white21" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white22" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white23" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white24" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white25" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white26" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white27" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white28" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white29" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white30" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white31" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white32" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white33" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white34" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white35" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white36" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white37" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white38" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white39" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white40" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white41" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white42" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white43" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white44" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white45" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white46" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white47" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white48" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white49" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white50" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white51" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white52" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white53" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white54" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white55" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white56" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white57" android:duration="50"></item>
+  	<item android:drawable="@drawable/loading_white58" android:duration="50"></item>
+  	
+</animation-list>

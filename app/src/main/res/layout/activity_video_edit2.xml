@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#2a3552" >
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_vedio_back" />
+
+        <ImageView
+            android:id="@+id/iv_play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="27dp"
+            android:layout_marginTop="87dp"
+            android:src="@drawable/empty_play" />
+
+        <com.jwzt.caibian.widget.VideoEditProgressBar
+            android:id="@+id/vedio_progress"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vedio_progress"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="00:00:00"
+            android:textColor="#b6c5dc"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <VideoView
+            android:id="@+id/vv_sound"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="播放"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_cut"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/video_cut" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@id/iv_cut"
+            android:src="@drawable/video_delete" />
+
+        <ImageView
+            android:id="@+id/iv_merge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/iv_cut"
+            android:src="@drawable/video_merge" />
+
+        <Button
+            android:id="@+id/btn_extract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="extract"
+            android:text="分离视频"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="重置"
+            android:visibility="gone" />
+
+        <com.jwzt.caibian.widget.MyRecyclerView
+            android:id="@+id/mrv"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_above="@id/iv_cut"
+            android:layout_marginBottom="20dp" >
+        </com.jwzt.caibian.widget.MyRecyclerView>
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="20dp"
+            android:layout_height="82dp"
+            android:layout_alignTop="@id/mrv"
+            android:layout_marginTop="-1.5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/left_corner" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="20dp"
+            android:layout_height="82dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/mrv"
+            android:layout_marginTop="-1.5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/right_corner" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mrv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="00:00:00"
+            android:textColor="#2a3552"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_above="@id/iv_cut"
+            android:layout_alignTop="@id/mrv"
+            android:layout_centerHorizontal="true"
+            android:background="#f1404b" />
+    </RelativeLayout>
+
+</LinearLayout>

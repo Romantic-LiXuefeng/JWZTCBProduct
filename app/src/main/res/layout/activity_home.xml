@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg0"
+    tools:context="com.jwzt.caibian.activity.HomeActivity">
+    <com.sunfusheng.marqueeview.MarqueeView
+        android:id="@+id/marqueeView"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
+        app:mvAnimDuration="1000"
+        app:mvDirection="bottom_to_top"
+        android:background="@drawable/alert_text_bg"
+        app:mvInterval="3000"
+        app:mvTextColor="@color/bar_grey"
+        app:mvTextSize="14sp"
+        app:mvSingleLine="true"
+        />
+<View
+    android:layout_width="wrap_content"
+    android:layout_weight="1"
+    android:layout_height="0dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="#fff" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@color/record_progress_bg"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_height="90dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@color/a5"
+        android:layout_marginRight="10dp"
+        android:layout_height="90dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@color/bule_overlay"
+        android:layout_marginRight="50dp"
+        android:layout_height="90dp">
+
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

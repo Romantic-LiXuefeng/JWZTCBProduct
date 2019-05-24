@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <include 
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout"/>
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="34dp"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:padding="5dp"
+        android:src="@drawable/three_dot" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+		android:fillViewport="true"
+		android:layout_height="wrap_content"
+        android:layout_below="@id/in_title" >
+
+        <RelativeLayout
+            android:id="@+id/rl_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+			<include
+				android:id="@+id/in_detail"
+				layout="@layout/layout_task_detail"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/rl_move"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/in_detail"
+                android:background="@android:color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_arrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="17dp"
+                        android:layout_centerHorizontal="true"
+                        android:padding="4dp"
+                        android:src="@drawable/dark_grey_arrow_up" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_bars"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/rl_arrow"
+                    android:layout_marginTop="16dp"
+                    android:background="#e8f0ee" />
+                	<View 
+		    android:id="@+id/view_bar"
+		    android:visibility="gone"
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/greye3"
+		    android:layout_below="@id/view_bars"
+		    android:layout_marginLeft="17dp"
+		    android:layout_marginRight="17dp"
+		    />
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_below="@id/view_bar"
+					android:id="@+id/Rl_sucai"
+					android:layout_height="wrap_content">
+                <View 
+
+                    android:layout_marginLeft="@dimen/icon_left"
+                    android:id="@+id/blue_bar"
+                    android:layout_width="4dp"
+		    		android:layout_height="15dp"
+		    		android:background="@color/a5"
+		    		 android:layout_marginTop="16dp"
+                    />	
+		<com.jwzt.caibian.view.FontTextView 
+		    android:id="@+id/tv_image_num"
+		    android:layout_marginTop="13dp"
+		    android:layout_marginLeft="28dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+
+		    android:singleLine="true"
+		    android:text="任务素材"
+            android:textColor="@color/grey3"
+            android:textSize="17sp"
+		    />
+		<com.jwzt.caibian.view.FontTextView 
+		    
+		    android:id="@+id/tv_video_num"
+		    android:layout_marginTop="13dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="视频(6)"
+		    android:visibility="gone"
+
+		    android:singleLine="true"
+		    android:layout_toRightOf="@id/tv_image_num"
+		    android:layout_marginLeft="15dp"
+		    />
+		<com.jwzt.caibian.view.FontTextView 
+		    android:id="@+id/tv_audio_num"
+		    android:layout_marginTop="13dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="音频(2)"
+		     android:visibility="gone"
+
+		    android:singleLine="true"
+		    android:layout_toRightOf="@id/tv_video_num"
+		    android:layout_marginLeft="15dp"
+		    />
+		<com.jwzt.caibian.view.FontTextView 
+		    android:id="@+id/tv_all"
+		    android:layout_marginRight="17dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="@color/grey9"
+		    android:text="全部 "
+		    android:layout_alignParentRight="true"
+		   android:layout_marginTop="13dp"
+
+		    android:drawableRight="@drawable/grey_arrow"
+		    />
+		<android.widget.HorizontalScrollView
+		    android:id="@+id/rv"
+		    android:layout_width="match_parent"
+		    android:layout_height="64dp"
+		    android:layout_marginTop="16dp"
+		    android:layout_below="@id/tv_image_num"
+		    android:scrollbars="none"
+		    >
+		    <LinearLayout 
+		        android:id="@+id/ll"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:orientation="horizontal"
+		        ></LinearLayout>
+		    </android.widget.HorizontalScrollView>
+				</RelativeLayout>
+ 					<View
+                    android:id="@+id/view_bar_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/Rl_sucai"
+                    android:layout_marginTop="16dp"
+                    android:background="#e8f0ee" />
+                <RelativeLayout
+                    android:id="@+id/rl_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+
+                    android:layout_below="@id/view_bar_below"
+                    android:background="@android:color/white" >
+					<!--  android:visibility="gone"-->
+					<View 
+                    android:id="@+id/view_rl_bar"
+                    android:layout_marginLeft="@dimen/icon_left"
+                    android:layout_width="4dp"
+		    		android:layout_height="15dp"
+		    		android:background="@color/a5"
+		    		 android:layout_marginTop="19dp"
+                    />	
+                    <com.jwzt.caibian.view.FontTextView
+                        android:id="@+id/tv_personNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28dp"
+                        android:text="参与人员：0人"
+                        android:textColor="@color/grey3"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_chat"
+                        android:layout_width="30dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/chat" />
+
+                    <com.jwzt.caibian.view.FontTextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/iv_chat"
+                        android:layout_alignRight="@id/iv_chat"
+                        android:layout_marginBottom="-6dp"
+                        android:background="@drawable/message_red_count_bgs"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="1dp"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textColor="@android:color/white"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_thinbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:visibility="gone"
+                    android:layout_below="@id/rl_num"
+                    android:background="#e3e3e3" />
+
+                <com.jwzt.caibian.widget.MyGridView
+                    android:id="@+id/gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"
+
+                    android:layout_below="@id/view_thinbar"
+                    android:background="#f5f5f5" />
+<!--      android:visibility="gone"-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/gv"
+
+                    android:background="#f5f5f5" />
+				<!--android:visibility="gone"-->
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_pop"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/in_title"
+        android:layout_marginRight="10dp"
+       
+        android:background="@drawable/mine" >
+
+        <View
+            android:id="@+id/view_vertical"
+            android:layout_width="0.25dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="#26000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/view_vertical"
+            android:orientation="vertical" >
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_send"
+                style="@style/poptext"
+                android:drawableLeft="@drawable/letter"
+                android:text="保存发送" />
+
+            <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#f0f0f0" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_save"
+                style="@style/poptext"
+                android:drawableLeft="@drawable/save_small"
+                android:text="保存" /> -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#f0f0f0" />
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/tv_upload"
+                style="@style/poptext"
+                android:drawableLeft="@drawable/camera"
+                android:text="即拍即传" />
+        </LinearLayout>
+    </RelativeLayout>
+<View 
+     android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+        android:layout_height="50dp"
+	android:id="@+id/ll_view"
+        android:background="@android:color/white"
+    />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_selector"
+        android:gravity="center"
+        android:text="开始"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:id="@+id/ll_renling1"
+		android:layout_alignParentBottom="true"
+		android:visibility="gone"
+		android:layout_height="wrap_content">
+		<TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:background="#F85530"
+			android:text="退回"
+			android:id="@+id/tv_tuihui1"
+			android:textSize="13sp"
+			android:textColor="@color/white"
+			android:layout_height="50dp" />
+		<TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:text="认领"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:id="@+id/tv_renling1"
+			android:textSize="13sp"
+			android:background="#5BB5DA"
+			android:layout_height="50dp" />
+	</LinearLayout>
+
+</RelativeLayout>

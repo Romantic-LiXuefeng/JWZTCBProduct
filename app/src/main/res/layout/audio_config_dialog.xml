@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/audioEffectSetting"
+            android:textColor="#ffffff"
+            android:textSize="17dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/audioChannel"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/etNumChannels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/layout_stroke"
+                android:gravity="center"
+                android:hint="@string/audioHint"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/audioSampleRate"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/etSampleRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/layout_stroke"
+                android:gravity="center"
+                android:hint="@string/audioHint"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/audioBitRate"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/etAudioBitRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/layout_stroke"
+                android:gravity="center"
+                android:hint="@string/audioHint"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

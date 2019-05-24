@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:background="@android:color/black"
+    android:layout_height="50dp" >
+    <VideoView 
+        android:id="@+id/vv_preview"
+         android:layout_width="150dp"
+    	 android:layout_height="100dp"
+    	  android:background="@android:color/black"
+        />
+    <ImageView 
+         android:id="@+id/iv_close_preview"
+       
+        android:layout_width="10dp"
+    	 android:layout_height="10dp"
+    	 android:src="@drawable/cha"
+    	 android:scaleType="fitXY"
+    	 android:layout_alignParentRight="true"
+    	 android:layout_marginRight="5dp"
+    	  android:layout_marginTop="5dp"
+    	 
+        />
+
+</RelativeLayout>

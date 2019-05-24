@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="150dp"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:id="@+id/iv_letter"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/letter" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/iv_letter"
+        android:text="发送"
+        android:textColor="@color/grey3" />
+
+    <ImageView
+        android:id="@+id/iv_save"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="66dp"
+        android:src="@drawable/save_small" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="68dp"
+        android:layout_toRightOf="@id/iv_save"
+        android:text="保存"
+        android:textColor="@color/grey3" />
+
+    <ImageView
+        android:id="@+id/iv_camera"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/camera" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="118dp"
+        android:layout_toRightOf="@id/iv_save"
+        android:text="随拍即传"
+        android:textColor="@color/grey3" />
+
+    <View
+        style="@style/popline"
+        android:layout_marginTop="50dp" />
+
+    <View
+        style="@style/popline"
+        android:layout_marginTop="100dp" />
+
+</RelativeLayout>

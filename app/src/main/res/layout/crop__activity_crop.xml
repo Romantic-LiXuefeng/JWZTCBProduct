@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jwzt.caibian.cutting.CropImageView
+        android:id="@+id/crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/crop__texture" />
+
+    <LinearLayout
+        android:id="@+id/done_cancel_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <FrameLayout
+            android:id="@+id/btn_cancel"
+            style="@style/ActionButton" >
+
+            <com.jwzt.caibian.view.FontTextView
+                style="@style/ActionButtonTextCancel"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_done"
+            style="@style/ActionButton" >
+
+            <com.jwzt.caibian.view.FontTextView
+                style="@style/ActionButtonTextDone"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

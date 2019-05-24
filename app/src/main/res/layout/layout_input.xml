@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+         >
+<RelativeLayout 
+    android:id="@+id/rl_input"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#fbfbfb" >
+
+    <ImageView
+        android:id="@+id/iv_sound"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/sound" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_sound"
+        android:src="@drawable/play_circle" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/plus_chat" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/iv_plus"
+        android:layout_toRightOf="@id/iv_play"
+        android:background="@drawable/et_bg"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+</RelativeLayout>
+<View 
+    android:id="@+id/view_bar"
+  android:layout_below="@id/rl_input"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#e7e7e7"
+    />
+<LinearLayout 
+    android:id="@+id/ll"
+    android:layout_below="@id/view_bar"
+    android:layout_width="match_parent"
+    android:background="#fbfbfb"
+    android:layout_height="105dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout 
+        android:id="@+id/sl_image"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/image" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout 
+        android:id="@+id/sl_camera"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera2" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout
+        android:id="@+id/sl_file"
+         style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/file" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+    <com.jwzt.caibian.widget.SquareLayout
+        android:id="@+id/sl_location"
+        style="@style/square" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location_grey" />
+    </com.jwzt.caibian.widget.SquareLayout>
+
+    <View style="@style/divider" />
+
+</LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>

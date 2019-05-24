@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:paddingBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_time"
+        style="@style/tvTimeStyle" />
+
+    <com.jwzt.caibian.widget.CircleImageView
+        android:id="@+id/civ"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="@dimen/chat_margin_top"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/replace" />
+     
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/civ"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/civ"
+        android:text="欧阳娜娜"
+        android:textColor="@color/grey3"
+        android:textSize="16sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/civ"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/tv_name"
+        android:text="新闻中心"
+        android:visibility="invisible"
+        android:textColor="#c8cbca"
+        android:textSize="11sp" />
+
+    <com.jwzt.caibian.widget.RoundedImageView
+        android:id="@+id/img1"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignRight="@id/tv_name"
+        android:layout_below="@id/tv_group"
+        android:layout_marginTop="5dp"
+        app:corner_radius="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/replace"
+      />
+    
+    
+    <com.jwzt.caibian.widget.RoundedImageView
+        android:id="@+id/img2"
+        android:layout_toLeftOf="@id/img1"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/tv_group"
+        android:layout_marginTop="5dp"
+        app:corner_radius="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/replace"
+      />
+    
+      
+
+      <TextView
+          android:id="@+id/tv_number"
+          android:gravity="center_vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+          android:layout_alignRight="@+id/img1"
+          android:layout_below="@+id/tv_group"
+          android:text="6"
+          android:textColor="@color/red"
+          android:textSize="15sp" />
+
+</RelativeLayout>

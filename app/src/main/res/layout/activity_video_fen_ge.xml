@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.jwzt.caibian.activity.VideoEdit.VideoFenGeActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <VideoView
+        android:id="@+id/vv_vedio_show"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+
+    android:layout_centerVertical="true"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/iv_play_pause"
+            android:src="@drawable/play_white"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/vedio_progress"
+            style="@style/mv_video_play_seekbar"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vedio_progress"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="00:00:00"
+            android:textColor="#b6c5dc"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_progress_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sl"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="00:00:00"
+        android:gravity="center"
+        android:textColor="#2a3552"
+        android:textSize="10sp" />
+    <com.jwzt.caibian.widget.ObservableScrollView
+        android:id="@+id/sl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:id="@+id/ll_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/video_thumb_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.jwzt.caibian.widget.EditVideoImageBar
+                android:id="@+id/iv_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <!-- android:gravity="center_vertical|center_horizontal"-->
+    </com.jwzt.caibian.widget.ObservableScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_btn_cut"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:src="@drawable/video_cut" />
+    </LinearLayout>
+
+</LinearLayout>

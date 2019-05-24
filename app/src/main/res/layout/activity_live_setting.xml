@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f0">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_net"
+        style="@style/live_setting"
+        android:layout_below="@id/in_title"
+        android:text="网络设置" />
+
+    <ImageView
+        android:id="@+id/iv_net"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_net" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_show_net"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_net"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@id/iv_net"
+        android:text="使用3G/4G网络"
+        android:textColor="#c5c5c5"
+        android:textSize="12sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_mic"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_net"
+        android:layout_marginTop="1dp"
+        android:text="麦克风音量" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_mic"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="17dp"
+        android:max="100"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/mseekbar"
+        android:thumb="@drawable/thumb"
+        android:thumbOffset="1.2dp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/seekBar"
+        android:layout_below="@id/seekBar"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-1dp"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="#686868"
+        android:textSize="8sp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_logo"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_mic"
+        android:layout_marginTop="10dp"
+        android:text="直播时启用logo" />
+
+    <com.jwzt.caibian.widget.SwitchView
+        android:id="@+id/sv_logo"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_logo"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_logo_position_setting"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_logo"
+        android:layout_marginTop="1dp"
+        android:text="直播logo位置" />
+
+    <ImageView
+        android:id="@+id/iv_live_logo_position"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_logo_position_setting" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_logo_setting"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_logo_position_setting"
+        android:layout_marginTop="1dp"
+        android:text="直播logo设置" />
+
+    <ImageView
+        android:id="@+id/iv_live_logo1"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_logo_setting" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_quality"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_logo_setting"
+        android:layout_marginTop="1dp"
+        android:text="直播质量" />
+
+    <ImageView
+        android:id="@+id/iv_live_logo2"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_quality" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_save"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_quality"
+        android:layout_marginTop="10dp"
+        android:text="直播时保存录像" />
+
+    <com.jwzt.caibian.widget.SwitchView
+        android:id="@+id/sv_save"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_save"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_record_logo"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_save"
+        android:layout_marginTop="10dp"
+        android:text="录制logo设置" />
+
+    <ImageView
+        android:id="@+id/iv_live_logo3"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_record_logo" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_record_quality"
+        style="@style/live_setting"
+        android:layout_below="@id/tv_record_logo"
+        android:layout_marginTop="1dp"
+        android:text="录制设置" />
+
+    <ImageView
+        android:id="@+id/iv_live_logo"
+        style="@style/live_setting_arrow"
+        android:layout_alignTop="@id/tv_record_quality" />
+
+</RelativeLayout>

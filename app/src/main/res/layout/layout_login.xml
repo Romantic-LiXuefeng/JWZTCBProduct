@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp" >
+
+        <com.jwzt.caibian.widget.RoundedImageView
+            android:id="@+id/riv"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+
+            android:src="@drawable/logo1" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_station"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/riv"
+            android:text="经纬中天移动生产平台"
+            android:textColor="#808080"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/tv_english"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_station"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/riv"
+            android:text="BroadVision Caster"
+            android:textColor="@android:color/black"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:text="移动采编系统"
+        android:textColor="#2374aa"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/bar_account"
+        style="@style/loginBar"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="115dp" />
+
+    <View
+        android:id="@+id/bar_pwd"
+        style="@style/loginBar"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="170dp" />
+
+    <ImageView
+        android:id="@+id/tv_account"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bar_account"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/user"
+
+        />
+
+    <ImageView
+        android:id="@+id/tv_pwd"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/bar_account"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="135dp"
+        android:src="@drawable/pword" />
+    <EditText
+        android:id="@+id/et_account"
+        android:hint="使用手机/邮箱登录"
+        android:layout_marginTop="80dp"
+        style="@style/loginEditText"
+
+        />
+     <EditText 
+        android:id="@+id/et_pwd"
+        android:hint="不少于6位字母/数字"
+        android:layout_marginTop="135dp"
+        android:inputType="textPassword"
+        style="@style/loginEditText"
+        />
+     <com.jwzt.caibian.view.FontTextView 
+         android:id="@+id/tv_login"
+         android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:textColor="@android:color/white"
+          android:text="登      陆"
+          android:gravity="center"
+
+          android:layout_marginLeft="35dp"
+          android:layout_marginRight="35dp"
+          android:background="@drawable/login_btn_selector"
+          android:layout_below="@id/bar_pwd"
+          android:layout_marginTop="30dp"
+         />
+     <com.jwzt.caibian.view.FontTextView 
+         android:id="@+id/tv_right"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:textColor="#818181"
+          android:text="Copyright@ 2019北京经纬中天信息技术有限公司"
+          android:textSize="10sp"
+          android:layout_marginBottom="19dp"
+          android:layout_centerHorizontal="true"
+         />
+
+</RelativeLayout>

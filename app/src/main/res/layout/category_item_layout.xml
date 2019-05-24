@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:background="@drawable/press_selector" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_left_ringht"
+        android:src="@drawable/news_c" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginLeft="@dimen/margin_image_text_left_right"
+        android:layout_toRightOf="@id/iv"
+        android:gravity="center_vertical"
+        android:text="新闻"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/main_body_title_text_size" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_arrow"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/new_checked"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/tv"
+        android:layout_marginLeft="15dp"
+         android:layout_marginRight="15dp"
+         android:background="#e3e3e3"
+        />
+
+</RelativeLayout>

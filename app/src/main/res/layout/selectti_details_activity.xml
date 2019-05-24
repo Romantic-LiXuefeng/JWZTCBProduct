@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/my_head_layout" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_style_right"
+        android:layout_marginTop="@dimen/title_style_top"
+        android:text="编辑"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_style_text_size" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_selecttititle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey6"
+                    android:text="选题标题"/>
+
+
+                <com.jwzt.caibian.view.FontTextView
+                    android:id="@+id/titleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/grey3"
+                    android:layout_toEndOf="@+id/tv_selecttititle"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_selecttitype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey6"
+                    android:text="类         型"/>
+
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="广播电视"
+                    android:layout_toEndOf="@+id/tv_selecttitype"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey3"
+                    android:layout_marginLeft="10dp"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dark_grey_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_selecttipro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey6"
+                    android:text="栏        目"/>
+
+
+                <TextView
+                    android:id="@+id/tv_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="民生"
+                    android:layout_toEndOf="@+id/tv_selecttipro"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey3"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dark_grey_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_selectticreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey6"
+                    android:text="创  建  者"/>
+
+
+                <TextView
+                    android:id="@+id/tv_createauth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="汪小菲"
+                    android:layout_toEndOf="@+id/tv_selectticreate"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey3"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_selecttistatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey6"
+                    android:text="状         态"/>
+
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="待审"
+                    android:layout_toEndOf="@+id/tv_selecttistatus"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey3"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容详情"
+                android:textColor="@color/grey6"
+                android:padding="10dp"/>
+
+
+            <WebView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_bar2"
+                android:lineSpacingExtra="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="23dp"
+                android:textColor="#818181"
+                android:textSize="17sp" />
+
+            <com.jwzt.caibian.widget.MyGridView
+                android:id="@+id/gv_resource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:numColumns="4"
+                android:divider="@android:color/white"
+                android:dividerHeight="10dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="派遣任务"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/paiqiantask"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

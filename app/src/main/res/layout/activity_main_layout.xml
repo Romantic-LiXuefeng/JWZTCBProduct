@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#33333b"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/main_title"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+
+        <Button
+            android:id="@+id/btnLanguage"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="3dp"
+            android:text=" "
+            android:textSize="14dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/recordOtakephoto"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/camera_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/record_square"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/squareType"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/record_wide"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/fullScreenType"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/record"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/changeRecordType"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/videoEdit"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/ui_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/directEdit"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/directEdit"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/selectMediaAndEdit"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/galleryMediaEdit"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/draftList"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/draftEdit"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/shortVideo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <Button
+                android:id="@+id/shortVideoEdit"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/short15"/>
+
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/imageVideoDemo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/btnQuik"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/apiQuik"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/aeImageTemp"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/aeVideo"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/creativeFunnyVideo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/apiVideoTemp"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/crFunnyApiDemo"/>
+
+
+            <View
+                style="@style/rdDemoLineMarginStyle"
+                />
+
+            <Button
+                android:id="@+id/aeDefaultTempList"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/crFunnyAEDemo"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/irregularRectDemo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/testPointF"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/irregularVPDemo"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/testRectFAnim"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/photoRectAnim"
+                android:visibility="gone"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/maskDemo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <Button
+                android:id="@+id/alien"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/edit"/>
+
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/audioEffectDemo"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/soundEffect"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/audioEffectDemo"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/videoTrim"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/trimConfig"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/trim_l"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/horizontalVideo"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/trim_p"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/verticalVideo"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/trim_s"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/squareVideo"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/trim_alum"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/galleryVideo"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/album"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/album_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/default_album"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/imageAndVideo"/>
+
+            <View style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/only_video"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/onlyVideo"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/only_photo"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/onlyImage"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/compressionText"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/compress_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/compress"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/compressionVideo"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/antiChangeRecord"
+                    android:textColor="#88ffffff"/>
+
+
+                <Button
+                    android:id="@+id/AntiChange_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <Button
+                android:id="@+id/recordAntiChange"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/antiFullRecord"/>
+
+            <View
+                style="@style/rdDemoLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/otherMenu"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/rdDemoLineStyle"
+                />
+
+            <Button
+                android:id="@+id/player"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/player"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"
+                />
+
+            <Button
+                android:id="@+id/imageTrans"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/imageDeformation"/>
+
+            <View
+                style="@style/rdDemoLineMarginStyle"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/export"
+                    style="@style/buttonStyle"
+                    android:onClick="onVideo"
+                    android:text="@string/exportDemo"/>
+
+
+                <Button
+                    android:id="@+id/audio_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="@string/btnSetting"/>
+
+            </RelativeLayout>
+
+            <View style="@style/rdDemoLineMarginStyle"/>
+
+            <Button
+                android:id="@+id/reset_config"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="@string/resetAllConfig"/>
+
+            <View style="@style/rdDemoLineStyle"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

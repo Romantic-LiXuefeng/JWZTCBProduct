@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" /> -->
+
+    <com.jwzt.caibian.view.FontTextView
+        android:visibility="gone"
+        android:id="@+id/picker_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/picker_title"
+        android:textColor="#ff6600"
+        android:textSize="22sp" />
+
+    
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:orientation="horizontal">
+
+
+        <com.jp.wheelview.WheelView
+            android:id="@+id/year"
+            style="@style/wheelViewStyle"
+            android:layout_width="56dp"
+             />
+
+       
+
+        <com.jp.wheelview.WheelView
+            android:layout_marginLeft="10dp"
+            android:layout_width="28dp"
+            android:id="@+id/month"
+            style="@style/wheelViewStyle" />
+
+
+        <com.jp.wheelview.WheelView
+             android:layout_marginLeft="10dp"
+            android:layout_width="28dp"
+            android:id="@+id/day"
+            style="@style/wheelViewStyle" />
+
+
+       
+
+        <com.jp.wheelview.WheelView
+             android:layout_marginLeft="23dp"
+            android:id="@+id/hour"
+             android:layout_width="28dp"
+            style="@style/wheelViewStyle" />
+        
+
+        <com.jp.wheelview.WheelView
+             android:layout_marginLeft="10dp"
+            android:id="@+id/minute"
+            android:layout_width="28dp"
+            style="@style/wheelViewStyle" />    
+    </LinearLayout>
+
+    
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_12"
+        android:paddingTop="@dimen/dimen_12">
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_weight="1"
+            android:background="@drawable/btn_left_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:background="@drawable/btn_post_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+ 
+</LinearLayout>

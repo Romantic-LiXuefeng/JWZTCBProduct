@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 正在下载页面进度条样式 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background">
+        <shape>
+            <gradient
+                android:angle="0"
+                android:centerColor="@color/grey"
+                android:centerY="0.75"
+                android:endColor="@color/grey"
+                android:startColor="@color/grey" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:angle="0"
+                    android:centerColor="@color/grey"
+                    android:centerY="0.75"
+                    android:endColor="@color/grey"
+                    android:startColor="@color/grey" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:angle="0"
+                    android:endColor="@color/a5"
+                    android:startColor="@color/a5" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/blackcolor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical">
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_ssml"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="时时码流"
+        android:textSize="15sp"
+        android:textColor="#dddce3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_ssmlbh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_ssml"
+        android:layout_marginLeft="80dp"
+        android:text="0.12 KB/S"
+        android:textSize="15sp"
+        android:textColor="#dddce3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:layout_toRightOf="@+id/tv_ssmlbh"
+        android:id="@+id/tv_total_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:text="总流量"
+        android:textSize="15sp"
+        android:textColor="#dddce3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_total_flowbh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_total_flow"
+        android:layout_marginLeft="240dp"
+        android:text="0.12 KB/S"
+        android:textSize="15sp"
+        android:textColor="#dddce3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

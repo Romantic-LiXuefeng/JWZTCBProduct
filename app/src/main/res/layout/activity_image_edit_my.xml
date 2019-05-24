@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#2B3552">
+    
+    <FrameLayout
+        android:id="@+id/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/a5">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/back_arrow"/>
+
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="图片编辑"
+            android:textColor="#ffffff"
+            android:textSize="17sp"/>
+        <RelativeLayout
+            android:id="@+id/banner_flipper"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:gravity="center">
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/save1"
+                android:textColor="#ffffff"
+                android:textSize="14sp"/>
+
+            <com.jwzt.caibian.view.FontTextView
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/apply"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </FrameLayout>
+    
+    <com.jwzt.caibian.widget.ImageViewTouch
+            android:id="@+id/main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/banner"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_gravity="center"/>
+    
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1d1d1d"
+        android:orientation="horizontal"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        >
+        
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_chehui"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/image_chexiao"
+            android:textSize="@dimen/image_edit_text_size" />
+	</LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_crop"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/image_edit_icon_crop1"
+            android:textSize="@dimen/image_edit_text_size" />
+	</LinearLayout>
+
+         <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_rotate"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:background="@drawable/image_edit_icon_rota"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/image_edit_text_size" />
+
+          </LinearLayout>
+
+        <!-- 滤镜功能 -->
+ <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_stickers"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/image_edit_icon_mk"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:textSize="@dimen/image_edit_text_size" />
+          </LinearLayout>
+ <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_fliter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/image_edit_icon_yz"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/image_edit_text_size"/>
+          </LinearLayout>
+         <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        
+        <com.jwzt.caibian.view.FontTextView
+            android:id="@+id/btn_text"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/image_edit_icon_text1"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/image_edit_text_size"/>
+        
+          </LinearLayout>
+    </LinearLayout>
+    
+
+</RelativeLayout>

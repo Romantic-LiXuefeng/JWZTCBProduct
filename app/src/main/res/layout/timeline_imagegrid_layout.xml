@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_line_bg" >
+
+    <View
+        android:id="@+id/iv_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_dot" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_time"
+        style="@style/timeline"
+        android:layout_alignTop="@id/iv_dot"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-4dp"
+        android:text="15:22" />
+
+    <com.jwzt.caibian.view.FontTextView
+        android:id="@+id/tv_date"
+        style="@style/timeline"
+        android:layout_alignTop="@id/iv_dot"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="-4dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:text="2017/4/26" />
+
+    <com.jwzt.caibian.widget.NoScrollGridView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_time"
+        android:layout_below="@id/tv_time"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:verticalSpacing="10dp" />
+
+    <View
+        android:id="@+id/view_mask"
+        android:layout_width="8dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="#f5f5f5"
+        android:visibility="gone" />
+
+</RelativeLayout>
